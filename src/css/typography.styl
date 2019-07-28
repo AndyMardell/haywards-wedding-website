@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Domine:700|Literata:400,400i,700,700i|Open+Sans:800&display=swap')
+
+strong, b
+  font-weight 700
+
+a
+  color green
+  text-decoration none
+  position relative
+
+  &:not(.link--plain)
+    background-image linear-gradient(180deg, transparent 80%, yellow 0)
+    background-size 100% 80%
+    padding-bottom 0.2em
+    transition 200ms ease-in-out background-size
+
+    &:hover
+      background-size 100% 100%
+
+    &.link--small-underline
+      background-size 100% 75%
+
+      @media not all and (pointer: coarse)
+        &:hover
+          background-size 100% 100%
+
+    &:hover:after
+      border-bottom none
+
+  &.link
+    font-size 1.1em
+
+h1
+h2
+h3
+h4
+h5
+  color dark
+  font-family font-headings
+  font-weight 800
+  text-transform uppercase
+  text-decoration none
+  margin 0.5em 0
+
+  &.link > a
+    border-bottom none
+    background-image linear-gradient(180deg, transparent 75%, yellow 0)
+    background-repeat no-repeat
+    background-size 100% 75%
+    transition background-size .4s ease
+
+    &:hover
+      background-size 100% 85%
+
+p
+  font-family font-body
+  font-weight 400
+  color dark
+  responsive-margin-vertical(25, 35, 2em)
+
+em
+  font-style italic
+
+blockquote
+  padding-left 20px
+  border-left 8px solid brown
+
+  p
+    font-weight bold
+    responsive-font(18, 22, 1em)
+    responsive-line-height(1.8, 2.2, 2em)
+    padding-top 7px
+    padding-bottom 15px

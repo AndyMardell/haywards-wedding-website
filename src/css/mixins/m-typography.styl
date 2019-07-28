@@ -1,0 +1,38 @@
+responsive-font(min, max, fallback = null)
+  if fallback
+    font-size fallback
+  font-size "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+
+responsive-line-height(min, max, fallback = null)
+  if fallback
+    line-height fallback
+  line-height "calc(%sem + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+
+responsive-margin-top(min, max, fallback = null)
+  if fallback
+    margin-top fallback
+  margin-top "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+
+  responsive-margin-bottom(min, max, fallback = null)
+  if fallback
+    margin-bottom fallback
+  margin-bottom "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+
+responsive-margin-vertical(min, max, fallback = null)
+  if fallback
+    margin-top fallback
+    margin-bottom fallback
+  margin-top "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+  margin-bottom "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+
+responsive-margin-horizontal(min, max, fallback = null)
+  if fallback
+    margin-left fallback
+    margin-right fallback
+  margin-left "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+  margin-right "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+
+responsive-letter-spacing(min, max, fallback = null)
+  if fallback
+    letter-spacing fallback
+  letter-spacing "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
