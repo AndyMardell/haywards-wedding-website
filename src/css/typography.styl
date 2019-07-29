@@ -8,28 +8,6 @@ a
   text-decoration none
   position relative
 
-  &:not(.link--plain)
-    background-image linear-gradient(180deg, transparent 80%, yellow 0)
-    background-size 100% 80%
-    padding-bottom 0.2em
-    transition 200ms ease-in-out background-size
-
-    &:hover
-      background-size 100% 100%
-
-    &.link--small-underline
-      background-size 100% 75%
-
-      @media not all and (pointer: coarse)
-        &:hover
-          background-size 100% 100%
-
-    &:hover:after
-      border-bottom none
-
-  &.link
-    font-size 1.1em
-
 h1
 h2
 h3
@@ -41,16 +19,6 @@ h5
   text-transform uppercase
   text-decoration none
   margin 0.5em 0
-
-  &.link > a
-    border-bottom none
-    background-image linear-gradient(180deg, transparent 75%, yellow 0)
-    background-repeat no-repeat
-    background-size 100% 75%
-    transition background-size .4s ease
-
-    &:hover
-      background-size 100% 85%
 
 p
   font-family font-body

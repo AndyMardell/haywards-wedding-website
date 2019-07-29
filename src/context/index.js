@@ -2,7 +2,6 @@ import React, { createContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const defaultContextValue = {
-  siteTitle: 'James and Sophie',
   showMenu: false
 }
 
