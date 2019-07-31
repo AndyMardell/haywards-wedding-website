@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import Context from '../context'
 import PropTypes from 'prop-types'
+import Context from '../context'
 
 const MenuButton = ({ fixed }) => {
   const [context, setContext] = useContext(Context)
@@ -14,8 +14,15 @@ const MenuButton = ({ fixed }) => {
     })
   }
 
+  const toggleClass = context.showMenu ? 'menu-button--open' : ''
+
   return (
-    <a href='#' className={buttonClass} onClick={toggleMenu}>
+    <a href='#' className={`${buttonClass} ${toggleClass}`} onClick={toggleMenu}>
+      <div className='menu-button__burger'>
+        <span />
+        <span />
+        <span />
+      </div>
       {context.showMenu ? 'Close' : 'Menu'}
     </a>
   )

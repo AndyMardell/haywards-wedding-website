@@ -7,7 +7,7 @@ a
   color dark
   text-decoration none
   position relative
-
+  font-weight 800
   border-bottom 2px solid gold
 
 h1
@@ -19,13 +19,26 @@ h5
   font-family font-headings
   font-weight 300
   text-decoration none
-  margin 0.5em 0
+  margin 0.3em 0 0.5em
+
+  a
+    font-weight 300
+
+h1
+  responsive-line-height(1, 1.5, 1.8)
+  responsive-font(40, 70, 3em)
+  margin 0.2em 0
+
+h2
+  responsive-font(40, 70, 3em)
+  margin-bottom 0.72em
+  margin-top 0.2em
 
 p
   font-family font-body
   font-weight 400
   color grey
-  responsive-margin-vertical(25, 35, 2em)
+  responsive-margin-vertical(10, 20, 1em)
 
 em
   font-style italic

@@ -1,8 +1,58 @@
 .menu-button
   position absolute
-  top 0
-  left 0
+  top 50%
+  left 1.5em
+  transform translateY(-50%)
   z-index 100
+  border-bottom none
+  responsive-font(11, 13, 0.8em)
+  text-transform uppercase
+  letter-spacing 1px
+  font-weight bold
+  display flex
+  justify-content center
+  align-items center
 
   &--fixed
     position fixed
+    color white
+    transform none
+    top 0
+    left 0
+    margin 4.5vw 5vw
+
+    .menu-button__burger span
+        display block
+        height 3px
+        width 100%
+        background-color white
+
+  &--open
+    color dark
+
+    .menu-button__burger
+      span
+        background-color dark
+        margin-bottom -2px
+        &:nth-child(1)
+          transform rotate(45deg)
+        &:nth-child(2)
+          display none
+        &:nth-child(3)
+          transform rotate(-45deg)
+
+  &__burger
+    position relative
+    width 30px
+    margin-right 10px
+
+    span
+      display block
+      height 3px
+      width 100%
+      background-color dark
+      margin-bottom 6px
+      transition 300ms all ease
+
+      &:last-child
+        margin-bottom 0

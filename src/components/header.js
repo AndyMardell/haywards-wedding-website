@@ -10,7 +10,7 @@ const Header = ({ menu }) => (
       {menu !== false &&
         <MenuButton />
       }
-      <div>
+      <div className='[ u-flex  u-flex--align-center  u-flex--justyify-center ]'>
         <h2 className='header__logo'>
           <Fade to="/">James &amp; Sophie</Fade>
         </h2>
