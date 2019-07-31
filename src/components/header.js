@@ -1,36 +1,29 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Fade from '../transitions/fade'
-import Context from '../context'
-import Menu from './menu'
+import MenuButton from './menuButton'
+import Menu from '../components/menu'
 
-const Header = () => {
-  const [context, setContext] = useContext(Context)
-
-  const toggleMenu = (e) => {
-    e && e.preventDefault()
-    setContext({
-      ...context,
-      showMenu: !context.showMenu
-    })
-  }
-
-  return (
-    <>
-      <header className='header'>
-        <a href='#' className='header__menu' onClick={toggleMenu}>
-          {context.showMenu ? 'Close' : 'Menu'}
-        </a>
-        <div>
-          <h2 className='header__logo'>
-            <Fade to="/">James &amp; Sophie</Fade>
-          </h2>
-        </div>
-      </header>
-      {context.showMenu &&
+const Header = ({ menu }) => (
+  <>
+    <header className='header'>
+      {menu !== false &&
+        <MenuButton />
+      }
+      <div>
+        <h2 className='header__logo'>
+          <Fade to="/">James &amp; Sophie</Fade>
+        </h2>
+      </div>
+      {menu !== false &&
         <Menu />
       }
-    </>
-  )
+    </header>
+  </>
+)
+
+Header.propTypes = {
+  menu: PropTypes.boolean
 }
 
 export default Header

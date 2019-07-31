@@ -1,20 +1,28 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Fade from '../transitions/fade'
 import Layout from '../layouts'
-import Image from '../components/image'
 import SEO from '../components/seo'
+import HeaderSplash from '../components/headerSplash'
 
 const IndexPage = () => (
-  <Layout location={location}>
+  <>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <HeaderSplash />
+    <Layout
+      header={false}
+      footer={false}
+      main={false}
+      splash
+    >
+      <div className='[ u-flex  u-flex--justify-center  u-flex--align-center ]  u-height--full'>
+        <div className='u-align--center'>
+          <h2>Tying the Knot</h2>
+          <p>Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet turpis non, accumsan imperdiet orci oun cuaamsan.</p>
+          <Fade to="/page-2/">Go to page 2</Fade>
+        </div>
+      </div>
+    </Layout>
+  </>
 )
 
 export default IndexPage

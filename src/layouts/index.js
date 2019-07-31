@@ -2,22 +2,31 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import '../css/app.styl'
+import '../css/components/c-layout.styl'
 
-const Layout = ({ children, location, hero }) => (
-  <>
-    <Header location={location} hero={hero} />
-    <main>
-      {children}
-      <Footer />
-    </main>
-  </>
+const Layout = ({ children, header, footer, main, menu, splash }) => (
+  <div className={splash && 'layout--splash'}>
+    {header !== false && <Header menu={menu} />}
+    {main === false
+      ? <>
+        {children}
+        {footer !== false && <Footer />}
+      </>
+      : <main>
+        {children}
+        {footer !== false && <Footer />}
+      </main>
+    }
+  </div>
 )
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequired,
-  hero: PropTypes.string
+  header: PropTypes.boolean,
+  footer: PropTypes.boolean,
+  main: PropTypes.boolean,
+  menu: PropTypes.boolean,
+  splash: PropTypes.boolean
 }
 
 export default Layout
