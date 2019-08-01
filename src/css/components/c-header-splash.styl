@@ -1,21 +1,17 @@
 .header-splash
   position fixed
-  background-color #ccc
-  background-image url('../images/rose-background-small.png')
-  background-size cover
-  background-position center center
-  margin 2vw
-  width 96vw
-  height calc(100vh - 4vw)
+  width 100vw
+  height 100vh
+  height: calc(var(--vh, 1vh) * 100)
   display flex
   justify-content center
   align-items center
 
   &__background
-    bottom 0
-    left 0
-    right 0
-    top 0
+    bottom 2vw
+    left 2vw
+    right 2vw
+    top 2vw
     z-index -1
 
   h1

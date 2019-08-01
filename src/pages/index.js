@@ -6,7 +6,7 @@ import HeaderSplash from '../components/headerSplash'
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="James and Sophie's Wedding: 31 October 2020" />
     <HeaderSplash />
     <Layout
       header={false}
