@@ -22,11 +22,11 @@ const Layout = ({ children, header, footer, main, menu, splash }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  header: PropTypes.boolean,
-  footer: PropTypes.boolean,
-  main: PropTypes.boolean,
-  menu: PropTypes.boolean,
-  splash: PropTypes.boolean
+  header: PropTypes.bool,
+  footer: PropTypes.bool,
+  main: PropTypes.bool,
+  menu: PropTypes.bool,
+  splash: PropTypes.bool
 }
 
 export default Layout

@@ -1,3 +1,8 @@
+responsive-margin(min, max, fallback = null)
+  if fallback
+    margin fallback
+  margin "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)
+
 responsive-margin-top(min, max, fallback = null)
   if fallback
     margin-top fallback

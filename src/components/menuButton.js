@@ -29,7 +29,7 @@ const MenuButton = ({ fixed }) => {
 }
 
 MenuButton.propTypes = {
-  fixed: PropTypes.boolean
+  fixed: PropTypes.bool
 }
 
 export default MenuButton

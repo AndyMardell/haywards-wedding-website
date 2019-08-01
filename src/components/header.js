@@ -23,7 +23,7 @@ const Header = ({ menu }) => (
 )
 
 Header.propTypes = {
-  menu: PropTypes.boolean
+  menu: PropTypes.bool
 }
 
 export default Header
