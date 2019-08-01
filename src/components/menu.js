@@ -20,10 +20,8 @@ const Menu = () => {
         style={{ display: context.showMenu && 'flex' }}
       >
         <ul>
-          <li><Fade to='/' onClick={hideMenu}>Some</Fade></li>
-          <li><Fade to='/' onClick={hideMenu}>Some</Fade></li>
-          <li><Fade to='/' onClick={hideMenu}>Some</Fade></li>
-          <li><Fade to='/' onClick={hideMenu}>Some</Fade></li>
+          <li><Fade to='/' onClick={hideMenu}>Home</Fade></li>
+          <li><Fade to='/wedding' onClick={hideMenu}>The Wedding</Fade></li>
         </ul>
       </nav>
     </>

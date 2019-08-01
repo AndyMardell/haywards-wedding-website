@@ -8,14 +8,14 @@ const Image = ({ file, height, className, absolute }) => {
     query {
       driedflowers: file(relativePath: { eq: "dried-flowers.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       rose: file(relativePath: { eq: "rose-background.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
           }
         }

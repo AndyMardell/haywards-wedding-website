@@ -1,0 +1,29 @@
+.columns
+  display flex
+  flex-wrap wrap
+  flex-grow 1
+  justify-content space-between
+  align-items center
+
+  & > div
+    width 42%
+    padding 3%
+    responsive-margin-top(20, 40, 2em)
+
+    @media only screen and (max-width 700px)
+      width 93%
+
+  .info
+    position relative
+    padding-left 30px
+    font-size 0.9em
+
+    &:before
+      content ''
+      display block
+      position absolute
+      left 0
+      top 5px
+      bottom 0
+      width 4px
+      background-color light

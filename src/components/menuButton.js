@@ -23,7 +23,7 @@ const MenuButton = ({ fixed }) => {
         <span />
         <span />
       </div>
-      {context.showMenu ? 'Close' : 'Menu'}
+      <span>{context.showMenu ? 'Close' : 'Menu'}</span>
     </a>
   )
 }

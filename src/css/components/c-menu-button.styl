@@ -5,7 +5,7 @@
   transform translateY(-50%)
   z-index 100
   border-bottom none
-  responsive-font(11, 13, 0.8em)
+  responsive-font(10, 13, 0.8em)
   text-transform uppercase
   letter-spacing 1px
   font-weight bold
@@ -13,13 +13,18 @@
   justify-content center
   align-items center
 
+  & > span
+    @media only screen and (max-width 600px)
+      display none
+
   &--fixed
     position fixed
     color white
     transform none
     top 0
     left 0
-    margin 4.5vw 5vw
+    responsive-margin-vertical(40, 80, 5vw)
+    responsive-margin-horizontal(45, 90, 5vw)
 
     .menu-button__burger span
         display block
@@ -46,6 +51,9 @@
     width 30px
     margin-right 10px
 
+    @media only screen and (max-width 600px)
+      width 25px
+
     span
       display block
       height 3px
@@ -56,3 +64,6 @@
 
       &:last-child
         margin-bottom 0
+
+      @media only screen and (max-width 600px)
+        margin-bottom 4px
