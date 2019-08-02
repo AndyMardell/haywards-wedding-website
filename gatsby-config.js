@@ -40,6 +40,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/js-icon.png`
       }
-    }
+    },
+    `gatsby-plugin-offline`
   ]
 }
