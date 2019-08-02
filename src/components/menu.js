@@ -40,7 +40,10 @@ const Menu = () => {
   const [loaded, setLoaded] = useState(false)
   const showClass = context.showMenu ? 'menu--shown' : ''
   const hideMenu = (e) => setContext({ ...context, showMenu: false })
-  useEffect(() => setLoaded(true), [])
+
+  useEffect(() => {
+    context.showMenu && setLoaded(true)
+  }, [context.showMenu])
 
   return (
     <>
