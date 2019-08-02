@@ -41,45 +41,16 @@ const PartyGallery = () => {
   useEffect(() => setShow(true), [])
   const data = useStaticQuery(graphql`
     query {
-      rectangle: file(relativePath: { eq: "party/rectangle.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 295) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      rectangle1: file(relativePath: { eq: "party/rectangle-1.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 295) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      rectangle2: file(relativePath: { eq: "party/rectangle-2.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 295) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      rectangle3: file(relativePath: { eq: "party/rectangle-3.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 295) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      rectangle4: file(relativePath: { eq: "party/rectangle-4.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 295) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      rectangle5: file(relativePath: { eq: "party/rectangle-5.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 295) {
-            ...GatsbyImageSharpFluid
+      allFile(filter: {relativeDirectory: {eq: "party"}}) {
+        edges {
+          node {
+            id
+            name
+            childImageSharp {
+              fluid(maxWidth: 295) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
@@ -88,9 +59,9 @@ const PartyGallery = () => {
 
   return (
     <Gallery className='party-gallery' pose={show ? 'visible' : 'hidden'}>
-      {Object.keys(data).map((item, i) =>
+      {data.allFile.edges.map((item, i) =>
         <ImgContainer key={i}>
-          <Img fluid={data[item].childImageSharp.fluid} />
+          <Img fluid={item.node.childImageSharp.fluid} />
         </ImgContainer>
       )}
     </Gallery>
