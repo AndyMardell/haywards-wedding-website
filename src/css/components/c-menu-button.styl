@@ -12,8 +12,12 @@
   display flex
   justify-content center
   align-items center
-  height 20px
+  height 34px
   color dark
+  background transparent
+  border none
+  cursor pointer
+  padding 5px
 
   & > span
     @media only screen and (max-width 600px)
@@ -25,7 +29,7 @@
     transform none
     top 0
     left 0
-    responsive-margin(40, 80, 5vw)
+    responsive-margin(30, 80, 5vw)
 
     .menu-button__burger span
         display block
@@ -68,6 +72,9 @@
 
       @media only screen and (max-width 600px)
         margin-bottom 4px
+
+  &:focus
+    outline none
 
   &:hover
     font-style normal

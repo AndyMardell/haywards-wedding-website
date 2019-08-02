@@ -8,7 +8,13 @@ const Nav = posed.nav({
   open: {
     x: '0%',
     delayChildren: 500,
-    staggerChildren: 50
+    staggerChildren: 50,
+    transition: {
+      x: {
+        type: 'tween',
+        ease: 'easeIn'
+      }
+    }
   },
   closed: {
     x: '-100%',

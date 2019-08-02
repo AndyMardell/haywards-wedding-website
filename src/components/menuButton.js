@@ -17,14 +17,14 @@ const MenuButton = ({ fixed }) => {
   const toggleClass = context.showMenu ? 'menu-button--open' : ''
 
   return (
-    <a href='#' className={`${buttonClass} ${toggleClass}`} onClick={toggleMenu}>
+    <button className={`${buttonClass} ${toggleClass}`} onClick={toggleMenu}>
       <div className='menu-button__burger'>
         <span />
         <span />
         <span />
       </div>
       <span>{context.showMenu ? 'Close' : 'Menu'}</span>
-    </a>
+    </button>
   )
 }
 
