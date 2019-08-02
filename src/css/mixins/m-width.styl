@@ -1,0 +1,4 @@
+responsive-width(min, max, fallback = null)
+  if fallback
+    width fallback
+  width "calc(%spx + (%s - %s) * ((100vw - 300px) / (1600 - 300)))" % (min max min)

@@ -20,6 +20,20 @@ const Image = ({ file, height, className, absolute }) => {
           }
         }
       }
+      burymanor: file(relativePath: { eq: "bury-manor.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      accommodation: file(relativePath: { eq: "accommodation.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 

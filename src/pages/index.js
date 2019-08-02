@@ -16,7 +16,7 @@ const IndexPage = () => (
     >
       <div className='[ u-flex  u-flex--justify-center  u-flex--align-center ]  u-height--full'>
         <div className='u-align--center  u-pad--small'>
-          <h2>Tying the Knot</h2>
+          <h2>31 October 2020</h2>
           <p className='u-width--narrower'>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
             turpis non, accumsan imperdiet orci oun cuaamsan.

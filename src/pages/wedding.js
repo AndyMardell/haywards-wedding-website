@@ -14,7 +14,7 @@ const Wedding = () => (
       </p>
     </div>
     <Image file='driedflowers' height={200} />
-    <div className='columns'>
+    <div className='content  content--columns'>
       <div>
         <h3>Ceremony</h3>
         <p>
@@ -46,9 +46,10 @@ const Wedding = () => (
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <div className='info'>
-          2pm on 31 October 2020<br />
-          Bury Manor Barn, West Sussex, RH20 1PB<br />
-          <a href='#'>Map & Directions &rarr;</a>
+            1. No stiletto heels<br />
+            2. No paper or plastic confetti<br />
+            3. Cash only bar<br />
+            4. No having fun
         </div>
       </div>
       <div>
@@ -58,9 +59,10 @@ const Wedding = () => (
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <div className='info'>
-          2pm on 31 October 2020<br />
-          Bury Manor Barn, West Sussex, RH20 1PB<br />
-          <a href='#'>Map & Directions &rarr;</a>
+            James & Sophie<br />
+            ***REMOVED***<br />
+            ***REMOVED***<br />
+            ***REMOVED***
         </div>
       </div>
     </div>

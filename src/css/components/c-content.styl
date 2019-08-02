@@ -1,0 +1,39 @@
+.content
+  padding 3%
+
+  &--columns
+    padding 0
+    display flex
+    flex-wrap wrap
+    flex-grow 1
+    justify-content space-between
+    align-items center
+
+    & > div
+      width 42%
+      padding 3%
+      responsive-margin-top(20, 40, 2em)
+
+      @media only screen and (max-width 700px)
+        width 93%
+
+    .info
+      position relative
+      padding-left 30px
+      font-size 0.9em
+      responsive-margin-vertical(12, 25, 1em)
+      responsive-line-height(1.6, 4.5, 2)
+
+      &:before
+        content ''
+        display block
+        position absolute
+        left 0
+        top 5px
+        bottom 0
+        width 4px
+        background-color light
+
+  &__icon
+    margin-top 20px
+    responsive-height(80, 130, 130px)

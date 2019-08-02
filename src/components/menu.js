@@ -2,6 +2,32 @@ import React, { useContext } from 'react'
 import Helmet from 'react-helmet'
 import Fade from '../transitions/fade'
 import Context from '../context'
+import posed from 'react-pose'
+
+const Nav = posed.nav({
+  open: {
+    x: '0%',
+    delayChildren: 500,
+    staggerChildren: 50
+  },
+  closed: {
+    x: '-100%',
+    staggerChildren: 50,
+    staggerDirection: -1,
+    delay: 500
+  }
+})
+
+const Item = posed.li({
+  open: {
+    y: 0,
+    opacity: 1
+  },
+  closed: {
+    y: 10,
+    opacity: 0
+  }
+})
 
 const Menu = () => {
   const [context, setContext] = useContext(Context)
@@ -15,15 +41,18 @@ const Menu = () => {
           class: context.showMenu && 'body--no-overflow'
         }}
       />
-      <nav
+      <Nav
         className={`menu  ${showClass}`}
-        style={{ display: context.showMenu && 'flex' }}
+        pose={context.showMenu ? 'open' : 'closed'}
       >
         <ul>
-          <li><Fade to='/' onClick={hideMenu}>Home</Fade></li>
-          <li><Fade to='/wedding' onClick={hideMenu}>The Wedding</Fade></li>
+          <Item><Fade to='/' onClick={hideMenu}>Home</Fade></Item>
+          <Item><Fade to='/wedding' onClick={hideMenu}>Wedding</Fade></Item>
+          <Item><Fade to='/venue' onClick={hideMenu}>Venue &amp; Travel</Fade></Item>
+          <Item><Fade to='/wedding-party' onClick={hideMenu}>Wedding Party</Fade></Item>
+          <Item><Fade to='/accommodation' onClick={hideMenu}>Accommodation</Fade></Item>
         </ul>
-      </nav>
+      </Nav>
     </>
   )
 }

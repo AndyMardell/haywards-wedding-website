@@ -13,6 +13,7 @@
   justify-content center
   align-items center
   height 20px
+  color dark
 
   & > span
     @media only screen and (max-width 600px)
@@ -67,3 +68,13 @@
 
       @media only screen and (max-width 600px)
         margin-bottom 4px
+
+  &:hover
+    font-style normal
+
+    &:not(.menu-button--open) .menu-button__burger span
+      width 90%
+      &:first-child
+        width 100%
+      &:last-child
+        width 75%
