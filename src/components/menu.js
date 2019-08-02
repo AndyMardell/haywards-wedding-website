@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Helmet from 'react-helmet'
 import Fade from '../transitions/fade'
 import Context from '../context'
@@ -37,8 +37,10 @@ const Item = posed.li({
 
 const Menu = () => {
   const [context, setContext] = useContext(Context)
+  const [loaded, setLoaded] = useState(false)
   const showClass = context.showMenu ? 'menu--shown' : ''
   const hideMenu = (e) => setContext({ ...context, showMenu: false })
+  useEffect(() => setLoaded(true), [])
 
   return (
     <>
@@ -50,6 +52,7 @@ const Menu = () => {
       <Nav
         className={`menu  ${showClass}`}
         pose={context.showMenu ? 'open' : 'closed'}
+        style={{ display: loaded ? 'flex' : 'none' }}
       >
         <ul>
           <Item><Fade to='/' onClick={hideMenu}>Home</Fade></Item>
