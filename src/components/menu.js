@@ -59,7 +59,7 @@ const Menu = () => {
       >
         <ul>
           <Item><Fade to='/' onClick={hideMenu}>Home</Fade></Item>
-          <Item><Fade to='/wedding' onClick={hideMenu}>Wedding</Fade></Item>
+          <Item><Fade to='/wedding' onClick={hideMenu}>The Wedding</Fade></Item>
           <Item><Fade to='/venue' onClick={hideMenu}>Venue &amp; Travel</Fade></Item>
           <Item><Fade to='/wedding-party' onClick={hideMenu}>Wedding Party</Fade></Item>
           <Item><Fade to='/accommodation' onClick={hideMenu}>Accommodation</Fade></Item>
