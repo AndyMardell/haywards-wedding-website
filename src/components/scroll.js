@@ -1,28 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import posed from 'react-pose'
+import { animated, useSpring, config } from 'react-spring'
 
-const ScrollContainer = posed.div({
-  visible: {
-    y: 0,
-    opacity: 1,
-    delay: 2000,
-    transition: {
-      y: { type: 'spring', stiffness: 200, damping: 15 },
-      default: { duration: 300 }
+const Scroll = ({ show }) => {
+  const props = useSpring({
+    delay: 3000,
+    config: config.wobbly,
+    from: { opacity: 0, transform: 'translateY(30px)' },
+    to: { opacity: show ? 1 : 0, transform: 'translateY(0)' }
+  })
+
+  return (
+    <>
+    {show &&
+      <animated.div style={props} className='scroll'>
+        Scroll
+      </animated.div>
     }
-  },
-  hidden: {
-    y: 20,
-    opacity: 0
-  }
-})
-
-const Scroll = ({ show }) => (
-  <ScrollContainer pose={show ? 'visible' : 'hidden'} className='scroll'>
-    Scroll
-  </ScrollContainer>
-)
+    </>
+  )
+}
 
 Scroll.propTypes = {
   show: PropTypes.bool
