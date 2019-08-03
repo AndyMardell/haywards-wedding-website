@@ -6,7 +6,7 @@ import HeaderSplash from '../components/headerSplash'
 
 const IndexPage = () => (
   <>
-    <SEO title="James and Sophie's Wedding: 31 October 2020" />
+    <SEO title="James &amp; Sophie's Wedding: 31 October 2020" />
     <HeaderSplash />
     <Layout
       header={false}
@@ -21,7 +21,7 @@ const IndexPage = () => (
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
             turpis non, accumsan imperdiet orci oun cuaamsan.
           </p>
-          <Fade to="/wedding/">More about our big day &rarr;</Fade>
+          <Fade to="/wedding">More about our big day &rarr;</Fade>
         </div>
       </div>
     </Layout>

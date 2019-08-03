@@ -7,7 +7,7 @@ import hotel from '../images/hotel.svg'
 
 const Accommodation = () => (
   <Layout>
-    <SEO title="Accommodation – James and Sophie" />
+    <SEO title="Accommodation – James &amp; Sophie" />
     <div className='intro'>
       <h1>Accommodation</h1>
       <p>

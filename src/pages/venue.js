@@ -5,7 +5,7 @@ import Image from '../components/image'
 
 const Venue = () => (
   <Layout>
-    <SEO title="Venue &amp; Travel – James and Sophie" />
+    <SEO title="Venue &amp; Travel – James &amp; Sophie" />
     <div className='intro'>
       <h1>Venue &amp; Travel</h1>
       <p>

@@ -5,7 +5,7 @@ import PartyGallery from '../components/partyGallery'
 
 const WeddingParty = () => (
   <Layout>
-    <SEO title="Wedding Party – James and Sophie" />
+    <SEO title="Wedding Party – James &amp; Sophie" />
     <div className='intro'>
       <h1>Wedding Party</h1>
       <p>
