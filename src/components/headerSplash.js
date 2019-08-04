@@ -3,9 +3,10 @@ import MenuButton from './menuButton'
 import Menu from '../components/menu'
 import Scroll from '../components/scroll'
 import Image from '../components/image'
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated, config } from 'react-spring'
 
 const fadeInUp = {
+  config: config.gentle,
   from: { opacity: 0, transform: 'translateY(30px)' },
   opacity: 1,
   transform: 'translateY(0)'

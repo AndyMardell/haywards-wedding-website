@@ -25,8 +25,7 @@ const PartyGallery = () => {
       }
     }
   `)
-  const mugshots = allFile.edges
-  const trail = useTrail(mugshots.length, {
+  const trail = useTrail(allFile.edges.length, {
     opacity: show ? 1 : 0,
     x: show ? 0 : 20,
     height: show ? 80 : 0,
@@ -38,7 +37,7 @@ const PartyGallery = () => {
       {trail.map(({ x, height, ...rest }, index) => (
         <AnimatedImg
           key={index}
-          fluid={mugshots[index].node.childImageSharp.fluid}
+          fluid={allFile.edges[index].node.childImageSharp.fluid}
           style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`) }}
         />
       ))}

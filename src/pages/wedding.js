@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import Image from '../components/image'
@@ -24,7 +25,7 @@ const Wedding = () => (
         <div className='info'>
           2pm on 31 October 2020<br />
           Bury Manor Barn, West Sussex, RH20 1PB<br />
-          <a href='#'>Map & Directions &rarr;</a>
+          <Link to='/venue/'>Map & Directions &rarr;</Link>
         </div>
       </div>
       <div>
@@ -36,7 +37,7 @@ const Wedding = () => (
         <div className='info'>
           7pm on 31 October 2020<br />
           Bury Manor Barn, West Sussex, RH20 1PB<br />
-          <a href='#'>Map & Directions &rarr;</a>
+          <Link to='/venue/'>Map & Directions &rarr;</Link>
         </div>
       </div>
       <div>

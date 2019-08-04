@@ -4,8 +4,8 @@ import { animated, useSpring, config } from 'react-spring'
 
 const Scroll = ({ show }) => {
   const props = useSpring({
-    delay: 3000,
-    config: config.wobbly,
+    delay: 2000,
+    config: config.gentle,
     from: { opacity: 0, transform: 'translateY(30px)' },
     to: { opacity: show ? 1 : 0, transform: 'translateY(0)' }
   })
