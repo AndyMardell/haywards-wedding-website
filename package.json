@@ -13,7 +13,6 @@
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-plugin-stylus-resources": "^1.0.22",
-    "gatsby-plugin-transition-link": "^1.12.4",
     "gatsby-source-filesystem": "^2.1.6",
     "gatsby-transformer-sharp": "^2.2.4",
     "gsap": "^2.1.3",

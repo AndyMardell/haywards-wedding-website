@@ -12,13 +12,7 @@ const ContextProvider = ({ children, location }) => {
   const [context, setContext] = useState(defaultContextValue)
 
   useEffect(() => setContext({ ...context, location }), [])
-  useEffect(() => {
-    setContext({
-      ...context,
-      showMenu: false,
-      location
-    })
-  }, [location])
+  useEffect(() => setContext({ ...context, location }), [location])
 
   return (
     <Context.Provider value={[context, setContext]}>

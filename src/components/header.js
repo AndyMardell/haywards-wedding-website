@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Fade from '../transitions/fade'
+import { Link } from 'gatsby'
 import MenuButton from './menuButton'
 import Menu from '../components/menu'
 
@@ -12,7 +12,7 @@ const Header = ({ menu }) => (
       }
       <div className='[ u-flex  u-flex--align-center  u-flex--justyify-center ]'>
         <h2 className='header__logo'>
-          <Fade to="/">James &amp; Sophie</Fade>
+          <Link to="/">James &amp; Sophie</Link>
         </h2>
       </div>
       {menu !== false &&

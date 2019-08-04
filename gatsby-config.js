@@ -7,9 +7,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-transition-link',
+      resolve: `gatsby-plugin-layout`,
       options: {
-        layout: require.resolve(`./src/layouts/wrapper.js`)
+        component: require.resolve(`./src/layouts/wrapper.js`)
       }
     },
     {

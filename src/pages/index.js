@@ -1,5 +1,5 @@
 import React from 'react'
-import Fade from '../transitions/fade'
+import { Link } from 'gatsby'
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import HeaderSplash from '../components/headerSplash'
@@ -21,7 +21,7 @@ const IndexPage = () => (
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
             turpis non, accumsan imperdiet orci oun cuaamsan.
           </p>
-          <Fade to="/wedding">More about our big day &rarr;</Fade>
+          <Link to="/wedding">More about our big day &rarr;</Link>
         </div>
       </div>
     </Layout>

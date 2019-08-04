@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from 'react'
 import Helmet from 'react-helmet'
-import Fade from '../transitions/fade'
+import { Link } from 'gatsby'
 import Context from '../context'
 import { animated, useTransition, useSpring, useChain, config } from 'react-spring'
 
@@ -42,13 +42,13 @@ const Menu = () => {
         <ul>
           {transitions.map(({ item, key, props }) => (
             <animated.li key={key} style={props} >
-              <Fade
+              <Link
                 to={item.link}
                 onClick={hideMenu}
                 className={context.location.pathname === item.link ? 'current' : ''}
               >
                 {item.name}
-              </Fade>
+              </Link>
             </animated.li>
           ))}
         </ul>
