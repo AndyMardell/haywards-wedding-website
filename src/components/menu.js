@@ -14,7 +14,12 @@ const menuItems = [
 
 const Menu = () => {
   const [context, setContext] = useContext(Context)
-  const hideMenu = () => setContext({ ...context, showMenu: false })
+  const hideMenu = (e) => {
+    if (e.target.classList.contains('current')) {
+      e.preventDefault()
+    }
+    setContext({ ...context, showMenu: false })
+  }
 
   const springRef = useRef()
   const springProps = useSpring({
@@ -45,7 +50,7 @@ const Menu = () => {
               <Link
                 to={item.link}
                 onClick={hideMenu}
-                className={context.location.pathname === item.link ? 'current' : ''}
+                activeClassName='current'
               >
                 {item.name}
               </Link>

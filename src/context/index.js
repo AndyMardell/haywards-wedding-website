@@ -1,18 +1,14 @@
-import React, { createContext, useState, useEffect } from 'react'
+import React, { createContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const defaultContextValue = {
-  showMenu: false,
-  location: { pathname: '/' }
+  showMenu: false
 }
 
 const Context = createContext(defaultContextValue)
 
-const ContextProvider = ({ children, location }) => {
+const ContextProvider = ({ children }) => {
   const [context, setContext] = useState(defaultContextValue)
-
-  useEffect(() => setContext({ ...context, location }), [])
-  useEffect(() => setContext({ ...context, location }), [location])
 
   return (
     <Context.Provider value={[context, setContext]}>
