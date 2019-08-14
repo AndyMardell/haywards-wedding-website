@@ -1,10 +1,7 @@
 import React, { createContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
-const defaultContextValue = {
-  showMenu: false
-}
-
+const defaultContextValue = { showMenu: false }
 const Context = createContext(defaultContextValue)
 
 const ContextProvider = ({ children }) => {

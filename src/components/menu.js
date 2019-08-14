@@ -14,12 +14,7 @@ const menuItems = [
 
 const Menu = () => {
   const [context, setContext] = useContext(Context)
-  const hideMenu = (e) => {
-    if (e.target.classList.contains('current')) {
-      e.preventDefault()
-    }
-    setContext({ ...context, showMenu: false })
-  }
+  const hideMenu = () => setContext({ ...context, showMenu: false })
 
   const springRef = useRef()
   const springProps = useSpring({

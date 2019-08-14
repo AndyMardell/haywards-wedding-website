@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { animated, useSpring, config } from 'react-spring'
 
 const Scroll = ({ show }) => {
-  const props = useSpring({
+  const fadeIn = useSpring({
     delay: 2000,
     config: config.gentle,
     from: { opacity: 0, transform: 'translateY(30px)' },
@@ -11,13 +11,9 @@ const Scroll = ({ show }) => {
   })
 
   return (
-    <>
-    {show &&
-      <animated.div style={props} className='scroll'>
-        Scroll
-      </animated.div>
-    }
-    </>
+    <animated.div style={fadeIn} className='scroll'>
+      Scroll
+    </animated.div>
   )
 }
 
