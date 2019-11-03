@@ -22,7 +22,7 @@ const Image = ({ file, height, className, absolute }) => {
       }
       autumn: file(relativePath: { eq: "autumn-leaves.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1600) {
+          fluid(maxWidth: 2000, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
