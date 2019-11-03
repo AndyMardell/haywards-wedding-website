@@ -1,13 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { useTrail, animated } from 'react-spring'
+import styled from 'styled-components'
 const AnimatedImg = animated(Img)
 
-const PartyGallery = () => {
-  const [show, setShow] = useState(false)
-  useEffect(() => setShow(true), [])
+const StyledGallery = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 
+  & > div {
+    width: 25%;
+    flex-grow: 1;
+    margin: 2%;
+  }
+`
+
+const PartyGallery = () => {
   const { allFile } = useStaticQuery(graphql`
     query {
       allFile(filter: {relativeDirectory: {eq: "party"}}) {
@@ -26,14 +35,18 @@ const PartyGallery = () => {
     }
   `)
   const trail = useTrail(allFile.edges.length, {
-    opacity: show ? 1 : 0,
-    x: show ? 0 : 20,
-    height: show ? 80 : 0,
-    from: { opacity: 0, x: 20, height: 0 }
+    from: {
+      opacity: 0,
+      x: 20,
+      height: 0
+    },
+    opacity: 1,
+    x: 0,
+    height: 80
   })
 
   return (
-    <div className='party-gallery'>
+    <StyledGallery>
       {trail.map(({ x, height, ...rest }, index) => (
         <AnimatedImg
           key={index}
@@ -41,7 +54,7 @@ const PartyGallery = () => {
           style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`) }}
         />
       ))}
-    </div>
+    </StyledGallery>
   )
 }
 

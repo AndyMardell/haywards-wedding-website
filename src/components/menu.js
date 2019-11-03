@@ -3,6 +3,50 @@ import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import Context from '../context'
 import { animated, useTransition, useSpring, useChain, config } from 'react-spring'
+import styled from 'styled-components'
+import { fluidRange } from 'polished'
+
+const Nav = styled(animated.nav)`
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  line-height: 2.5;
+  text-align: center;
+
+  ${fluidRange(
+    {
+      prop: 'font-size',
+      fromSize: '25px',
+      toSize: '35px'
+    },
+    '400px',
+    '1000px'
+  )}
+
+  ul li a {
+    font-family: ${({ theme }) => theme.font.headings};
+    border-bottom-width: 4px;
+    font-weight: 300;
+
+    &.current {
+      font-style: italic;
+    }
+  }
+`
+
+const List = styled.ul`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`
 
 const menuItems = [
   { name: 'Home', link: '/' },
@@ -21,7 +65,7 @@ const Menu = () => {
     ref: springRef,
     config: config.default,
     from: { width: '0%' },
-    to: { width: context.showMenu ? '100%' : '0%' }
+    width: context.showMenu ? '100%' : '0%'
   })
 
   const transRef = useRef()
@@ -38,8 +82,8 @@ const Menu = () => {
   return (
     <>
       <Helmet bodyAttributes={{ class: context.showMenu && 'body--no-overflow' }} />
-      <animated.nav className='menu' style={springProps}>
-        <ul>
+      <Nav style={springProps}>
+        <List>
           {transitions.map(({ item, key, props }) => (
             <animated.li key={key} style={props} >
               <Link
@@ -51,8 +95,8 @@ const Menu = () => {
               </Link>
             </animated.li>
           ))}
-        </ul>
-      </animated.nav>
+        </List>
+      </Nav>
     </>
   )
 }

@@ -1,30 +1,40 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Layout from '../layouts'
+import LayoutSplash from '../layouts/splash'
 import SEO from '../components/seo'
 import HeaderSplash from '../components/headerSplash'
+import styled from 'styled-components'
+import { fluidRange } from 'polished'
+import P from '../components/paragraph'
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  & > div {
+    text-align: center;
+    ${fluidRange({ prop: 'padding', fromSize: '15px', toSize: '30px' }, '400px', '1000px')}
+  }
+`
 
 const IndexPage = () => (
   <>
     <SEO title="James &amp; Sophie's Wedding: 31 October 2020" />
     <HeaderSplash />
-    <Layout
-      header={false}
-      footer={false}
-      main={false}
-      splash
-    >
-      <div className='[ u-flex  u-flex--justify-center  u-flex--align-center ]  u-height--full'>
-        <div className='u-align--center  u-pad--small'>
+    <LayoutSplash>
+      <Container>
+        <div>
           <h2>31 October 2020</h2>
-          <p className='u-width--narrower'>
+          <P narrow>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
             turpis non, accumsan imperdiet orci oun cuaamsan.
-          </p>
+          </P>
           <Link to="/wedding">More about our big day &rarr;</Link>
         </div>
-      </div>
-    </Layout>
+      </Container>
+    </LayoutSplash>
   </>
 )
 

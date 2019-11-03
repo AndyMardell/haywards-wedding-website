@@ -13,14 +13,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-stylus-resources`,
-      options: {
-        resources: [
-          './src/css/config/*'
-        ]
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

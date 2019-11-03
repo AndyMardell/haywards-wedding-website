@@ -1,9 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledFooter = styled.footer`
+  font-size: 0.9em;
+  margin-top: 5rem;
+`
 
 const Footer = () => (
-  <footer>
+  <StyledFooter>
     &copy; {new Date().getFullYear()} James & Sophie
-  </footer>
+  </StyledFooter>
 )
 
 export default Footer

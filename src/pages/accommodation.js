@@ -2,23 +2,40 @@ import React from 'react'
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import Image from '../components/image'
+import Intro from '../components/intro'
+import Content from '../components/content'
+import styled from 'styled-components'
+import { fluidRange } from 'polished'
 import airbnb from '../images/airbnb.svg'
 import hotel from '../images/hotel.svg'
+
+const Icon = styled.img`
+  margin-top: 20px;
+  ${fluidRange(
+    {
+      prop: 'height',
+      fromSize: '80px',
+      toSize: '130px'
+    },
+    '400px',
+    '1000px'
+  )}
+`
 
 const Accommodation = () => (
   <Layout>
     <SEO title="Accommodation – James &amp; Sophie" />
-    <div className='intro'>
+    <Intro>
       <h1>Accommodation</h1>
       <p>
         Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
         turpis non, accumsan imperdiet orci oun cuaamsan.
       </p>
-    </div>
+    </Intro>
     <Image file='accommodation' />
-    <div className='content  content--columns  u-align--center'>
+    <Content columns>
       <div>
-        <img src={airbnb} alt='Airbnb' className='content__icon' />
+        <Icon src={airbnb} alt='Airbnb' />
         <h4>Airbnb</h4>
         <p>
           Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -33,7 +50,7 @@ const Accommodation = () => (
         </a>
       </div>
       <div>
-        <img src={hotel} alt='Hotel' className='content__icon' />
+        <Icon src={hotel} alt='Hotel' />
         <h4>Hotels</h4>
         <p>
           Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -47,7 +64,7 @@ const Accommodation = () => (
           Visit Google Maps &rarr;
         </a>
       </div>
-    </div>
+    </Content>
   </Layout>
 )
 
