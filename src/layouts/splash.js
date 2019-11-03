@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../css/components/c-layout.styl'
 import styled from 'styled-components'
 
 const StyledLayout = styled.div`
