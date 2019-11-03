@@ -18,7 +18,7 @@ const StyledIntro = styled.div`
     {
       prop: 'padding-bottom',
       fromSize: '40px',
-      toSize: '70px'
+      toSize: '60px'
     },
     '400px',
     '1000px'

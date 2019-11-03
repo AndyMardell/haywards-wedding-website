@@ -88,11 +88,11 @@ const Splash = () => {
     <>
       <HeaderSplash>
         <div style={{ textAlign: 'center' }}>
-          <animated.h1 style={titleProps}>James & Sophie</animated.h1>
+          <animated.h1 style={{ marginTop: 0, ...titleProps }}>James & Sophie</animated.h1>
           <animated.h2 style={subtitleProps}>We&apos;re getting married</animated.h2>
         </div>
         <Scroll />
-        <StyledBackground file='rose' absolute />
+        <StyledBackground file='autumn' absolute />
       </HeaderSplash>
       <MenuButton fixed />
       <Menu />

@@ -7,6 +7,7 @@ const StyledContent = styled.div`
   padding: 3%;
 
   ${({ columns }) => columns && `
+    margin-top: 1em;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -17,10 +18,11 @@ const StyledContent = styled.div`
     & > div {
       width: 42%;
       padding: 3%;
+      ${fluidRange({ prop: 'margin-top', fromSize: '20px', toSize: '40px' }, '400px', '1000px')};
+
       @media only screen and (max-width: 700px) {
         width: 93%;
       }
-      ${fluidRange({ prop: 'margin-top', fromSize: '20px', toSize: '40px' }, '400px', '1000px')};
     }
   `}
 `

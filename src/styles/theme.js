@@ -1,7 +1,7 @@
 export default {
   colors: {
     dark: '#222222',
-    gold: '#E4C453',
+    gold: '#DD934D',
     grey: '#666666',
     light: '#DDDDDD'
   },
