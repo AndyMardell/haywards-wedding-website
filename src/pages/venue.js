@@ -16,7 +16,7 @@ const Venue = () => (
         turpis non, accumsan imperdiet orci oun cuaamsan.
       </p>
     </Intro>
-    <Image file='burymanor' />
+    <Image file="burymanor" />
     <Content columns>
       <div>
         <h3>Directions</h3>
@@ -25,15 +25,18 @@ const Venue = () => (
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <Info>
-          <strong>Bury Manor Barn</strong><br />
-          The Manor, Church Lane<br />
-          Bury, Pulborough<br />
+          <strong>Bury Manor Barn</strong>
+          <br />
+          The Manor, Church Lane
+          <br />
+          Bury, Pulborough
+          <br />
           West Sussex RH20 1PB
         </Info>
         <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.google.com/maps/dir//Dorset+House+School,+Church+Ln,+Bury,+Pulborough+RH20+1PB/@50.9087757,-0.5573712,16.85z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4875b0a1bdc6e4b1:0x77acae92c51b79f1!2m2!1d-0.555214!2d50.908556!3e0'
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.google.com/maps/dir//Dorset+House+School,+Church+Ln,+Bury,+Pulborough+RH20+1PB/@50.9087757,-0.5573712,16.85z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4875b0a1bdc6e4b1:0x77acae92c51b79f1!2m2!1d-0.555214!2d50.908556!3e0"
         >
           Get directions &rarr;
         </a>

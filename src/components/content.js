@@ -6,7 +6,9 @@ import { fluidRange } from 'polished'
 const StyledContent = styled.div`
   padding: 3%;
 
-  ${({ columns }) => columns && `
+  ${({ columns }) =>
+    columns &&
+    `
     margin-top: 1em;
     padding: 0;
     display: flex;
@@ -18,7 +20,11 @@ const StyledContent = styled.div`
     & > div {
       width: 42%;
       padding: 3%;
-      ${fluidRange({ prop: 'margin-top', fromSize: '20px', toSize: '40px' }, '400px', '1000px')};
+  ${fluidRange(
+    { prop: 'margin-top', fromSize: '20px', toSize: '40px' },
+    '400px',
+    '1000px'
+  )};
 
       @media only screen and (max-width: 700px) {
         width: 93%;
@@ -28,9 +34,7 @@ const StyledContent = styled.div`
 `
 
 const Content = ({ children, columns }) => (
-  <StyledContent columns={columns}>
-    {children}
-  </StyledContent>
+  <StyledContent columns={columns}>{children}</StyledContent>
 )
 
 Content.propTypes = {

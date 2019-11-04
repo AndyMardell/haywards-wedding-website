@@ -34,7 +34,9 @@ const Button = styled.button`
     '1000px'
   )}
 
-  ${({ fixed }) => fixed && `
+  ${({ fixed }) =>
+    fixed &&
+    `
     position: fixed;
     color: white;
     transform: none;
@@ -42,15 +44,21 @@ const Button = styled.button`
     left: 0;
   `}
 
-  ${({ fixed }) => fixed && fluidRange(
-    {
-      prop: 'margin',
-      fromSize: '30px',
-      toSize: '65px'
-    }, '400px', '1000px'
-  )}
+  ${({ fixed }) =>
+    fixed &&
+    fluidRange(
+      {
+        prop: 'margin',
+        fromSize: '30px',
+        toSize: '65px'
+      },
+      '400px',
+      '1000px'
+    )}
 
-  ${({ open, theme }) => open && `
+  ${({ open, theme }) =>
+    open &&
+    `
     color: ${theme.colors.dark};
   `}
 
@@ -61,7 +69,9 @@ const Button = styled.button`
   &:hover {
     font-style: normal;
 
-    ${({ open }) => !open && `
+    ${({ open }) =>
+    !open &&
+      `
       & > div > span {
         width: 90%;
 
@@ -108,14 +118,18 @@ const Burger = styled.div`
       margin-bottom: 4px;
     }
 
-    ${({ open, fixed, theme }) => fixed && `
+    ${({ open, fixed, theme }) =>
+    fixed &&
+      `
       display: block;
       height: 2px;
       width: 100%;
       background-color: ${open ? theme.colors.dark : 'white'};
     `}
 
-    ${({ open, theme }) => open && `
+    ${({ open, theme }) =>
+    open &&
+      `
       transform: translateY(50%);
       background-color: ${({ theme }) => theme.colors.dark};
       margin-bottom: -2px;
@@ -137,10 +151,11 @@ const Burger = styled.div`
 
 const MenuButton = ({ fixed }) => {
   const [context, setContext] = useContext(Context)
-  const toggleMenu = () => setContext({
-    ...context,
-    showMenu: !context.showMenu
-  })
+  const toggleMenu = () =>
+    setContext({
+      ...context,
+      showMenu: !context.showMenu
+    })
 
   return (
     <Button fixed={fixed} open={context.showMenu} onClick={toggleMenu}>

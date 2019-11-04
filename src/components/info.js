@@ -38,11 +38,7 @@ const StyledInfo = styled.div`
   }
 `
 
-const Info = ({ children }) => (
-  <StyledInfo>
-    {children}
-  </StyledInfo>
-)
+const Info = ({ children }) => <StyledInfo>{children}</StyledInfo>
 
 Info.propTypes = {
   children: PropTypes.node

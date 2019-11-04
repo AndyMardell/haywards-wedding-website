@@ -40,11 +40,7 @@ const Scroll = () => {
     transform: 'translateY(0)'
   })
 
-  return (
-    <StyledScroll style={fadeIn}>
-      Scroll
-    </StyledScroll>
-  )
+  return <StyledScroll style={fadeIn}>Scroll</StyledScroll>
 }
 
 export default Scroll

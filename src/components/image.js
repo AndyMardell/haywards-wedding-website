@@ -13,13 +13,6 @@ const Image = ({ file, height, className, absolute }) => {
           }
         }
       }
-      rose: file(relativePath: { eq: "rose-background.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       autumn: file(relativePath: { eq: "autumn-leaves.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 90) {

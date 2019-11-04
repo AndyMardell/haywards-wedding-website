@@ -17,7 +17,7 @@ const Wedding = () => (
         turpis non, accumsan imperdiet orci oun cuaamsan.
       </p>
     </Intro>
-    <Image file='driedflowers' height={200} />
+    <Image file="driedflowers" height={200} />
     <Content columns>
       <div>
         <h3>Ceremony</h3>
@@ -26,9 +26,11 @@ const Wedding = () => (
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <Info>
-          2pm on 31 October 2020<br />
-          Bury Manor Barn, West Sussex, RH20 1PB<br />
-          <Link to='/venue/'>Map & Directions &rarr;</Link>
+          2pm on 31 October 2020
+          <br />
+          Bury Manor Barn, West Sussex, RH20 1PB
+          <br />
+          <Link to="/venue/">Map & Directions &rarr;</Link>
         </Info>
       </div>
       <div>
@@ -38,9 +40,11 @@ const Wedding = () => (
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <Info>
-          7pm on 31 October 2020<br />
-          Bury Manor Barn, West Sussex, RH20 1PB<br />
-          <Link to='/venue/'>Map & Directions &rarr;</Link>
+          7pm on 31 October 2020
+          <br />
+          Bury Manor Barn, West Sussex, RH20 1PB
+          <br />
+          <Link to="/venue/">Map & Directions &rarr;</Link>
         </Info>
       </div>
       <div>
@@ -50,10 +54,13 @@ const Wedding = () => (
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <Info>
-            1. No stiletto heels<br />
-            2. No paper or plastic confetti<br />
-            3. Cash only bar<br />
-            4. No having fun
+          1. No stiletto heels
+          <br />
+          2. No paper or plastic confetti
+          <br />
+          3. Cash only bar
+          <br />
+          4. No having fun
         </Info>
       </div>
       <div>
@@ -63,10 +70,13 @@ const Wedding = () => (
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <Info>
-            James & Sophie<br />
-            ***REMOVED***<br />
-            ***REMOVED***<br />
-            ***REMOVED***
+          James & Sophie
+          <br />
+          ***REMOVED***
+          <br />
+          ***REMOVED***
+          <br />
+          ***REMOVED***
         </Info>
       </div>
     </Content>

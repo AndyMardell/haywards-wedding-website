@@ -32,34 +32,34 @@ const Accommodation = () => (
         turpis non, accumsan imperdiet orci oun cuaamsan.
       </p>
     </Intro>
-    <Image file='accommodation' />
+    <Image file="accommodation" />
     <Content columns>
       <div>
-        <Icon src={airbnb} alt='Airbnb' />
+        <Icon src={airbnb} alt="Airbnb" />
         <h4>Airbnb</h4>
         <p>
           Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.airbnb.co.uk/s/Bury--Pulborough-RH20-1PB--UK/homes?refinement_paths%5B%5D=%2Fhomes&search_type=filter_change&place_id=ChIJLfZjt6GwdUgRcqA74G4jIlQ&checkin=2020-10-31&checkout=2020-11-01&s_tag=Jps80IzL'
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.airbnb.co.uk/s/Bury--Pulborough-RH20-1PB--UK/homes?refinement_paths%5B%5D=%2Fhomes&search_type=filter_change&place_id=ChIJLfZjt6GwdUgRcqA74G4jIlQ&checkin=2020-10-31&checkout=2020-11-01&s_tag=Jps80IzL"
         >
           Visit Airbnb &rarr;
         </a>
       </div>
       <div>
-        <Icon src={hotel} alt='Hotel' />
+        <Icon src={hotel} alt="Hotel" />
         <h4>Hotels</h4>
         <p>
           Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
         <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.google.com/maps/search/hotels/@50.920291,-0.6108262,12z/data=!3m1!4b1'
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.google.com/maps/search/hotels/@50.920291,-0.6108262,12z/data=!3m1!4b1"
         >
           Visit Google Maps &rarr;
         </a>

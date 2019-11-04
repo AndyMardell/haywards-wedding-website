@@ -7,9 +7,7 @@ const StyledFooter = styled.footer`
 `
 
 const Footer = () => (
-  <StyledFooter>
-    &copy; {new Date().getFullYear()} James & Sophie
-  </StyledFooter>
+  <StyledFooter>&copy; {new Date().getFullYear()} James & Sophie</StyledFooter>
 )
 
 export default Footer

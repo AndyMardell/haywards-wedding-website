@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const StyledP = styled.p`
-  ${({ narrow }) => narrow && `
+  ${({ narrow }) =>
+    narrow &&
+    `
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;

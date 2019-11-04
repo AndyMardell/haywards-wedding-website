@@ -2,9 +2,15 @@ import React, { useContext, useRef } from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import Context from '../context'
-import { animated, useTransition, useSpring, useChain, config } from 'react-spring'
 import styled from 'styled-components'
 import { fluidRange } from 'polished'
+import {
+  animated,
+  useTransition,
+  useSpring,
+  useChain,
+  config
+} from 'react-spring'
 
 const Nav = styled(animated.nav)`
   background: white;
@@ -69,28 +75,33 @@ const Menu = () => {
   })
 
   const transRef = useRef()
-  const transitions = useTransition(context.showMenu ? menuItems : [], item => item.name, {
-    ref: transRef,
-    trail: 400 / menuItems.length,
-    from: { opacity: 0, transform: 'translateY(20px)' },
-    enter: { opacity: 1, transform: 'translateY(0)' },
-    leave: { opacity: 0, transform: 'translateY(20px)' }
-  })
+  const transitions = useTransition(
+    context.showMenu ? menuItems : [],
+    item => item.name,
+    {
+      ref: transRef,
+      trail: 400 / menuItems.length,
+      from: { opacity: 0, transform: 'translateY(20px)' },
+      enter: { opacity: 1, transform: 'translateY(0)' },
+      leave: { opacity: 0, transform: 'translateY(20px)' }
+    }
+  )
 
-  useChain(context.showMenu ? [springRef, transRef] : [transRef, springRef], [0, context.showMenu ? 0.4 : 0.8])
+  useChain(context.showMenu ? [springRef, transRef] : [transRef, springRef], [
+    0,
+    context.showMenu ? 0.4 : 0.8
+  ])
 
   return (
     <>
-      <Helmet bodyAttributes={{ class: context.showMenu && 'body--no-overflow' }} />
+      <Helmet
+        bodyAttributes={{ class: context.showMenu && 'body--no-overflow' }}
+      />
       <Nav style={springProps}>
         <List>
           {transitions.map(({ item, key, props }) => (
-            <animated.li key={key} style={props} >
-              <Link
-                to={item.link}
-                onClick={hideMenu}
-                activeClassName='current'
-              >
+            <animated.li key={key} style={props}>
+              <Link to={item.link} onClick={hideMenu} activeClassName="current">
                 {item.name}
               </Link>
             </animated.li>

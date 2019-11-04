@@ -39,9 +39,7 @@ const StyledIntro = styled.div`
   }
 `
 
-const Intro = ({ children }) => (
-  <StyledIntro>{children}</StyledIntro>
-)
+const Intro = ({ children }) => <StyledIntro>{children}</StyledIntro>
 
 Intro.propTypes = {
   children: PropTypes.node

@@ -19,7 +19,7 @@ const StyledGallery = styled.div`
 const PartyGallery = () => {
   const { allFile } = useStaticQuery(graphql`
     query {
-      allFile(filter: {relativeDirectory: {eq: "party"}}) {
+      allFile(filter: { relativeDirectory: { eq: "party" } }) {
         edges {
           node {
             id
@@ -51,7 +51,10 @@ const PartyGallery = () => {
         <AnimatedImg
           key={index}
           fluid={allFile.edges[index].node.childImageSharp.fluid}
-          style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`) }}
+          style={{
+            ...rest,
+            transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
+          }}
         />
       ))}
     </StyledGallery>

@@ -26,7 +26,7 @@ const HeaderSplash = styled.div`
 
   h1 {
     line-height: 1;
-    ${fluidRange(
+  ${fluidRange(
     {
       prop: 'font-size',
       fromSize: '40px',
@@ -42,7 +42,7 @@ const HeaderSplash = styled.div`
     font-weight: 300;
     text-transform: uppercase;
     line-height: 1;
-    ${fluidRange(
+  ${fluidRange(
     {
       prop: 'padding-top',
       fromSize: '1px',
@@ -51,7 +51,7 @@ const HeaderSplash = styled.div`
     '400px',
     '1000px'
   )}
-    ${fluidRange(
+  ${fluidRange(
     {
       prop: 'font-size',
       fromSize: '13px',
@@ -60,7 +60,7 @@ const HeaderSplash = styled.div`
     '400px',
     '1000px'
   )}
-    ${fluidRange(
+  ${fluidRange(
     {
       prop: 'letter-spacing',
       fromSize: '3px',
@@ -88,11 +88,15 @@ const Splash = () => {
     <>
       <HeaderSplash>
         <div style={{ textAlign: 'center' }}>
-          <animated.h1 style={{ marginTop: 0, ...titleProps }}>James & Sophie</animated.h1>
-          <animated.h2 style={subtitleProps}>We&apos;re getting married</animated.h2>
+          <animated.h1 style={{ marginTop: 0, ...titleProps }}>
+            James & Sophie
+          </animated.h1>
+          <animated.h2 style={subtitleProps}>
+            We&apos;re getting married
+          </animated.h2>
         </div>
         <Scroll />
-        <StyledBackground file='autumn' absolute />
+        <StyledBackground file="autumn" absolute />
       </HeaderSplash>
       <MenuButton fixed />
       <Menu />

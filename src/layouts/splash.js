@@ -9,11 +9,7 @@ const StyledLayout = styled.div`
   z-index: 50;
 `
 
-const LayoutSplash = ({ children }) => (
-  <StyledLayout>
-    {children}
-  </StyledLayout>
-)
+const LayoutSplash = ({ children }) => <StyledLayout>{children}</StyledLayout>
 
 LayoutSplash.propTypes = {
   children: PropTypes.node.isRequired

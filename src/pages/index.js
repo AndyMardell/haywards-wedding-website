@@ -17,7 +17,11 @@ const Container = styled.div`
 
   & > div {
     text-align: center;
-    ${fluidRange({ prop: 'padding', fromSize: '15px', toSize: '30px' }, '400px', '1000px')}
+    ${fluidRange(
+    { prop: 'padding', fromSize: '15px', toSize: '30px' },
+    '400px',
+    '1000px'
+  )}
   }
 `
 
