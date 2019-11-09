@@ -4,8 +4,6 @@ import { fluidRange, normalize } from 'polished'
 const GlobalStyle = createGlobalStyle`
 ${normalize()}
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i|Playfair+Display&display=swap');
-
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -67,15 +65,6 @@ h1 {
   )}
   ${fluidRange(
     {
-      prop: 'margin-top',
-      fromSize: '15px',
-      toSize: '20px'
-    },
-    '400px',
-    '1000px'
-  )}
-  ${fluidRange(
-    {
       prop: 'margin-bottom',
       fromSize: '15px',
       toSize: '20px'
@@ -83,6 +72,7 @@ h1 {
     '400px',
     '1000px'
   )}
+  margin-top: 0;
 }
 
 h2 {

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { fluidRange } from 'polished'
 
 const StyledContent = styled.div`
   padding: 3%;
@@ -19,12 +18,7 @@ const StyledContent = styled.div`
 
     & > div {
       width: 42%;
-      padding: 3%;
-  ${fluidRange(
-    { prop: 'margin-top', fromSize: '20px', toSize: '40px' },
-    '400px',
-    '1000px'
-  )};
+      padding: 2rem;
 
       @media only screen and (max-width: 700px) {
         width: 93%;

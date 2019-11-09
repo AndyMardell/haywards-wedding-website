@@ -10,36 +10,49 @@ const StyledLayout = styled.div`
     {
       prop: 'margin-top',
       fromSize: '55px',
-      toSize: '80px'
+      toSize: '75px'
     },
     '400px',
     '1000px'
   )}
-
-  main {
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 0 2rem 1.45rem;
-    padding-top: 0;
-  }
 `
 
-const Layout = ({ children, header, footer, main, margin }) => (
+const Main = styled.main`
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-bottom: 1.45rem;
+  ${fluidRange(
+    {
+      prop: 'padding-left',
+      fromSize: '1rem',
+      toSize: '2rem'
+    },
+    '400px',
+    '1000px'
+  )}
+  ${fluidRange(
+    {
+      prop: 'padding-right',
+      fromSize: '1rem',
+      toSize: '2rem'
+    },
+    '400px',
+    '1000px'
+  )}
+`
+
+const Layout = ({ children }) => (
   <StyledLayout>
     <Header />
-    <main>
+    <Main>
       {children}
       <Footer />
-    </main>
+    </Main>
   </StyledLayout>
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  header: PropTypes.bool,
-  footer: PropTypes.bool,
-  main: PropTypes.bool,
-  margin: PropTypes.bool
+  children: PropTypes.node.isRequired
 }
 
 export default Layout

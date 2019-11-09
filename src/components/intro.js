@@ -2,14 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { fluidRange } from 'polished'
+import { useSpring, animated, config } from 'react-spring'
 
-const StyledIntro = styled.div`
+const StyledIntro = styled(animated.div)`
   text-align: center;
   ${fluidRange(
     {
       prop: 'padding-top',
-      fromSize: '25px',
-      toSize: '50px'
+      fromSize: '35px',
+      toSize: '90px'
     },
     '400px',
     '1000px'
@@ -18,7 +19,7 @@ const StyledIntro = styled.div`
     {
       prop: 'padding-bottom',
       fromSize: '40px',
-      toSize: '60px'
+      toSize: '100px'
     },
     '400px',
     '1000px'
@@ -39,7 +40,17 @@ const StyledIntro = styled.div`
   }
 `
 
-const Intro = ({ children }) => <StyledIntro>{children}</StyledIntro>
+const Intro = ({ children }) => {
+  const introSpring = useSpring({
+    config: config.molasses,
+    from: {
+      opacity: 0
+    },
+    opacity: 1
+  })
+
+  return <StyledIntro style={introSpring}>{children}</StyledIntro>
+}
 
 Intro.propTypes = {
   children: PropTypes.node

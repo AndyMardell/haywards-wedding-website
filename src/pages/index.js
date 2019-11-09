@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import LayoutSplash from '../layouts/splash'
 import SEO from '../components/seo'
@@ -6,8 +6,9 @@ import HeaderSplash from '../components/headerSplash'
 import styled from 'styled-components'
 import { fluidRange } from 'polished'
 import P from '../components/paragraph'
-import { config, animated, useSpring } from 'react-spring'
+import { config, animated } from 'react-spring'
 import useIsInViewport from 'use-is-in-viewport'
+import useAnimate from '../hooks/useAnimate'
 
 const Container = styled.div`
   display: flex;
@@ -27,23 +28,19 @@ const Container = styled.div`
 
 const IndexPage = () => {
   const [isInViewport, animatedDiv] = useIsInViewport()
-  const [loaded, setLoaded] = useState(false)
-
-  const fadeIn = useSpring({
-    config: config.molasses,
-    delay: 250,
-    from: {
-      opacity: 0,
-      transform: 'translateY(100px)'
-    },
-    opacity: loaded ? 1 : 0,
-    transform: loaded ? 'translateY(0px)' : 'translateY(100px)'
+  const fadeInTrigger = useAnimate({
+    trigger: isInViewport,
+    config: {
+      config: config.molasses,
+      delay: 250,
+      from: {
+        opacity: 0,
+        transform: 'translateY(100px)'
+      },
+      opacity: isInViewport ? 1 : 0,
+      transform: isInViewport ? 'translateY(0px)' : 'translateY(100px)'
+    }
   })
-
-  useEffect(() => {
-    if (loaded || !isInViewport) return
-    setLoaded(true)
-  }, [isInViewport])
 
   return (
     <>
@@ -51,7 +48,7 @@ const IndexPage = () => {
       <HeaderSplash />
       <LayoutSplash>
         <Container>
-          <animated.div ref={animatedDiv} style={fadeIn}>
+          <animated.div ref={animatedDiv} style={fadeInTrigger()}>
             <h2>31 October 2020</h2>
             <P narrow>
               Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet

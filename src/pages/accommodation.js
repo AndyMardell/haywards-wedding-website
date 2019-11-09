@@ -8,6 +8,10 @@ import styled from 'styled-components'
 import { fluidRange } from 'polished'
 import airbnb from '../images/airbnb.svg'
 import hotel from '../images/hotel.svg'
+import { animated } from 'react-spring'
+import useAnimate from '../hooks/useAnimate'
+
+const AnimatedImage = animated(Image)
 
 const Icon = styled.img`
   margin-top: 20px;
@@ -22,50 +26,59 @@ const Icon = styled.img`
   )}
 `
 
-const Accommodation = () => (
-  <Layout>
-    <SEO title="Accommodation – James &amp; Sophie" />
-    <Intro>
-      <h1>Accommodation</h1>
-      <p>
-        Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-        turpis non, accumsan imperdiet orci oun cuaamsan.
-      </p>
-    </Intro>
-    <Image file="accommodation" />
-    <Content columns>
-      <div>
-        <Icon src={airbnb} alt="Airbnb" />
-        <h4>Airbnb</h4>
+const AccommodationContainer = styled(animated.div)`
+  text-align: center;
+  margin-top: 3rem;
+`
+
+const Accommodation = () => {
+  const fadeIn = useAnimate()
+
+  return (
+    <Layout>
+      <SEO title="Accommodation – James &amp; Sophie" />
+      <Intro>
+        <h1>Accommodation</h1>
         <p>
           Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.airbnb.co.uk/s/Bury--Pulborough-RH20-1PB--UK/homes?refinement_paths%5B%5D=%2Fhomes&search_type=filter_change&place_id=ChIJLfZjt6GwdUgRcqA74G4jIlQ&checkin=2020-10-31&checkout=2020-11-01&s_tag=Jps80IzL"
-        >
-          Visit Airbnb &rarr;
-        </a>
-      </div>
-      <div>
-        <Icon src={hotel} alt="Hotel" />
-        <h4>Hotels</h4>
-        <p>
-          Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-          turpis non, accumsan imperdiet orci oun cuaamsan.
-        </p>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.google.com/maps/search/hotels/@50.920291,-0.6108262,12z/data=!3m1!4b1"
-        >
-          Visit Google Maps &rarr;
-        </a>
-      </div>
-    </Content>
-  </Layout>
-)
+      </Intro>
+      <AnimatedImage style={fadeIn(1500)} file="accommodation" />
+      <Content columns>
+        <AccommodationContainer style={fadeIn(2000)}>
+          <Icon src={airbnb} alt="Airbnb" />
+          <h4>Airbnb</h4>
+          <p>
+            Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
+            turpis non, accumsan imperdiet orci oun cuaamsan.
+          </p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.airbnb.co.uk/s/Bury--Pulborough-RH20-1PB--UK/homes?refinement_paths%5B%5D=%2Fhomes&search_type=filter_change&place_id=ChIJLfZjt6GwdUgRcqA74G4jIlQ&checkin=2020-10-31&checkout=2020-11-01&s_tag=Jps80IzL"
+          >
+            Visit Airbnb &rarr;
+          </a>
+        </AccommodationContainer>
+        <AccommodationContainer style={fadeIn(2200)}>
+          <Icon src={hotel} alt="Hotel" />
+          <h4>Hotels</h4>
+          <p>
+            Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
+            turpis non, accumsan imperdiet orci oun cuaamsan.
+          </p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.google.com/maps/search/hotels/@50.920291,-0.6108262,12z/data=!3m1!4b1"
+          >
+            Visit Google Maps &rarr;
+          </a>
+        </AccommodationContainer>
+      </Content>
+    </Layout>
+  )
+}
 
 export default Accommodation

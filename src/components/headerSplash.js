@@ -3,10 +3,10 @@ import MenuButton from './menuButton'
 import Menu from '../components/menu'
 import Scroll from '../components/scroll'
 import Image from '../components/image'
-import { useSpring, animated } from 'react-spring'
+import { animated } from 'react-spring'
 import styled from 'styled-components'
-import fadeInUp from '../animations/fadeInUp'
 import { fluidRange } from 'polished'
+import useAnimate from '../hooks/useAnimate'
 
 const HeaderSplash = styled.div`
   position: fixed;
@@ -18,14 +18,14 @@ const HeaderSplash = styled.div`
   align-items: center;
   top: 0;
   left: 0;
+  text-align: center;
+`
 
-  h1, h2 {
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  }
-
-  h1 {
-    line-height: 1;
+const H1 = styled(animated.h1)`
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  margin-top: 0;
+  line-height: 1;
   ${fluidRange(
     {
       prop: 'font-size',
@@ -35,13 +35,15 @@ const HeaderSplash = styled.div`
     '400px',
     '1000px'
   )}
-  }
+`
 
-  h2 {
-    font-family: ${({ theme }) => theme.font.body};
-    font-weight: 300;
-    text-transform: uppercase;
-    line-height: 1;
+const H2 = styled(animated.h2)`
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  font-family: ${({ theme }) => theme.font.body};
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
   ${fluidRange(
     {
       prop: 'padding-top',
@@ -69,7 +71,6 @@ const HeaderSplash = styled.div`
     '400px',
     '1000px'
   )}
-  }
 `
 
 const StyledBackground = styled(Image)`
@@ -81,19 +82,14 @@ const StyledBackground = styled(Image)`
 `
 
 const Splash = () => {
-  const titleProps = useSpring({ ...fadeInUp, delay: 500 })
-  const subtitleProps = useSpring({ ...fadeInUp, delay: 800 })
+  const fadeIn = useAnimate()
 
   return (
     <>
       <HeaderSplash>
-        <div style={{ textAlign: 'center' }}>
-          <animated.h1 style={{ marginTop: 0, ...titleProps }}>
-            James & Sophie
-          </animated.h1>
-          <animated.h2 style={subtitleProps}>
-            We&apos;re getting married
-          </animated.h2>
+        <div>
+          <H1 style={fadeIn(500)}>James & Sophie</H1>
+          <H2 style={fadeIn(800)}>We&apos;re getting married</H2>
         </div>
         <Scroll />
         <StyledBackground file="autumn" absolute />

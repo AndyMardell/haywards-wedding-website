@@ -4,8 +4,9 @@ import MenuButton from './menuButton'
 import Menu from '../components/menu'
 import styled from 'styled-components'
 import { fluidRange } from 'polished'
+import { animated, config, useSpring } from 'react-spring'
 
-const StyledHeader = styled.header`
+const StyledHeader = styled(animated.header)`
   background: white;
   display: flex;
   justify-content: center;
@@ -53,16 +54,29 @@ const Logo = styled.div`
   justify-content: center;
 `
 
-const Header = () => (
-  <StyledHeader>
-    <MenuButton />
-    <Logo>
-      <h2>
-        <Link to="/">James &amp; Sophie</Link>
-      </h2>
-    </Logo>
-    <Menu />
-  </StyledHeader>
-)
+const Header = () => {
+  const headerProps = useSpring({
+    config: config.gentle,
+    from: {
+      opacity: 0,
+      top: '-80px'
+    },
+    opacity: 1,
+    top: '0px',
+    delay: 2000
+  })
+
+  return (
+    <StyledHeader style={headerProps}>
+      <MenuButton />
+      <Logo>
+        <h2>
+          <Link to="/">James &amp; Sophie</Link>
+        </h2>
+      </Logo>
+      <Menu />
+    </StyledHeader>
+  )
+}
 
 export default Header
