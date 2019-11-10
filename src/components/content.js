@@ -12,7 +12,7 @@ const StyledContent = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    & > div {
+    & > * {
       width: 42%;
 
       @media only screen and (max-width: 700px) {

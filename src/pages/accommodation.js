@@ -11,6 +11,7 @@ import airbnb from '../images/airbnb.svg'
 import hotel from '../images/hotel.svg'
 import { animated } from 'react-spring'
 import useAnimate from '../hooks/useAnimate'
+import P from '../components/paragraph'
 
 const AnimatedBlock = animated(Block)
 const AnimatedImage = animated(Image)
@@ -36,10 +37,10 @@ const Accommodation = () => {
       <SEO title="Accommodation – James &amp; Sophie" />
       <Intro>
         <h1>Accommodation</h1>
-        <p>
+        <P narrow>
           Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
           turpis non, accumsan imperdiet orci oun cuaamsan.
-        </p>
+        </P>
       </Intro>
       <AnimatedImage style={fadeIn(1500)} file="accommodation" />
       <Content css="margin-top: 2em" columns>

@@ -9,6 +9,7 @@ import Block from '../components/block'
 import { animated } from 'react-spring'
 import useIsInViewport from 'use-is-in-viewport'
 import useAnimate from '../hooks/useAnimate'
+import P from '../components/paragraph'
 
 const AnimatedImage = animated(Image)
 const AnimatedBlock = animated(Block)
@@ -24,10 +25,10 @@ const Venue = () => {
       <SEO title="Venue &amp; Travel – James &amp; Sophie" />
       <Intro>
         <h1>Venue &amp; Travel</h1>
-        <p>
+        <P narrow>
           Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
           turpis non, accumsan imperdiet orci oun cuaamsan.
-        </p>
+        </P>
       </Intro>
       <AnimatedImage style={fadeIn(1500)} height={350} file="dorsetHouse" />
       <Content css="margin-top: 2em;" columns>

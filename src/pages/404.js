@@ -2,6 +2,7 @@ import React from 'react'
 import BlankLayout from '../layouts/blank'
 import SEO from '../components/seo'
 import styled from 'styled-components'
+import P from '../components/paragraph'
 
 const Container = styled.div`
   display: flex;
@@ -17,9 +18,9 @@ const NotFoundPage = () => (
     <Container>
       <div>
         <h1>Not Found</h1>
-        <p>
+        <P narrow>
           You just tried to find a page that doesn&#39;t exist... the sadness.
-        </p>
+        </P>
       </div>
     </Container>
   </BlankLayout>

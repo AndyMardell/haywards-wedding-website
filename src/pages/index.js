@@ -6,7 +6,7 @@ import HeaderSplash from '../components/headerSplash'
 import Content from '../components/content'
 import styled from 'styled-components'
 import P from '../components/paragraph'
-import { config, animated } from 'react-spring'
+import { animated } from 'react-spring'
 import useIsInViewport from 'use-is-in-viewport'
 import useAnimate from '../hooks/useAnimate'
 
@@ -20,19 +20,7 @@ const Container = styled(Content)`
 
 const IndexPage = () => {
   const [isInViewport, animatedDiv] = useIsInViewport()
-  const fadeInTrigger = useAnimate({
-    trigger: isInViewport,
-    config: {
-      config: config.molasses,
-      delay: 250,
-      from: {
-        opacity: 0,
-        transform: 'translateY(100px)'
-      },
-      opacity: isInViewport ? 1 : 0,
-      transform: isInViewport ? 'translateY(0px)' : 'translateY(100px)'
-    }
-  })
+  const fadeInTrigger = useAnimate({ trigger: isInViewport })
 
   return (
     <>

@@ -10,7 +10,7 @@ const StyledInfo = styled.div`
   ${fluidRange(
     {
       prop: 'margin-top',
-      fromSize: '12px',
+      fromSize: '15px',
       toSize: '25px'
     },
     '400px',
@@ -19,7 +19,7 @@ const StyledInfo = styled.div`
   ${fluidRange(
     {
       prop: 'margin-bottom',
-      fromSize: '12px',
+      fromSize: '15px',
       toSize: '25px'
     },
     '400px',

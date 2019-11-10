@@ -7,7 +7,7 @@ const useAnimate = (props = {}) => {
   const trigger = typeof props.trigger !== 'undefined' ? props.trigger : true
   const once = typeof props.once !== 'undefined' ? props.once : true
   const defaultConfig = {
-    config: springConfig.gentle,
+    config: springConfig.molasses,
     from: {
       opacity: 0,
       transform: 'translateY(30px)'
