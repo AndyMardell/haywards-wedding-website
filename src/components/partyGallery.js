@@ -13,6 +13,10 @@ const StyledGallery = styled.div`
     width: 25%;
     flex-grow: 1;
     margin: 2%;
+
+    @media only screen and (max-width: 700px) {
+      width: 45%;
+    }
   }
 `
 
