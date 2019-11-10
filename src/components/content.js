@@ -6,8 +6,6 @@ const StyledContent = styled.div`
   ${({ columns }) =>
     columns &&
     `
-    margin-top: 1em;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;

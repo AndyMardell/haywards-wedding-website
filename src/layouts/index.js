@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Header from '../components/header'
+import BlankLayout from './blank'
 import Footer from '../components/footer'
 import styled from 'styled-components'
 import { fluidRange } from 'polished'
 
-const StyledLayout = styled.div`
+const Main = styled.main`
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-bottom: 1.45rem;
   ${fluidRange(
     {
       prop: 'margin-top',
@@ -15,12 +18,6 @@ const StyledLayout = styled.div`
     '400px',
     '1000px'
   )}
-`
-
-const Main = styled.main`
-  margin: 0 auto;
-  max-width: 1000px;
-  padding-bottom: 1.45rem;
   ${fluidRange(
     {
       prop: 'padding-left',
@@ -42,13 +39,12 @@ const Main = styled.main`
 `
 
 const Layout = ({ children }) => (
-  <StyledLayout>
-    <Header />
+  <BlankLayout>
     <Main>
       {children}
       <Footer />
     </Main>
-  </StyledLayout>
+  </BlankLayout>
 )
 
 Layout.propTypes = {

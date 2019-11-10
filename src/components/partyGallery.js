@@ -38,6 +38,7 @@ const PartyGallery = () => {
       }
     }
   `)
+
   const trail = useTrail(allFile.edges.length, {
     from: {
       opacity: 0,

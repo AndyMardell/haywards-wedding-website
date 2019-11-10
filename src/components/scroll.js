@@ -34,7 +34,7 @@ const StyledScroll = styled(animated.div)`
 const Scroll = () => {
   const fadeIn = useSpring({
     delay: 2500,
-    config: config.molasses,
+    config: config.wobbly,
     from: { opacity: 0, transform: 'translateY(30px)' },
     opacity: 1,
     transform: 'translateY(0)'

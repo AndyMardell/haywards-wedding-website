@@ -18,7 +18,6 @@ const HeaderSplash = styled.div`
   align-items: center;
   top: 0;
   left: 0;
-  text-align: center;
 `
 
 const H1 = styled(animated.h1)`
@@ -26,6 +25,7 @@ const H1 = styled(animated.h1)`
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   margin-top: 0;
   line-height: 1;
+  text-align: center;
   ${fluidRange(
     {
       prop: 'font-size',
@@ -38,6 +38,7 @@ const H1 = styled(animated.h1)`
 `
 
 const H2 = styled(animated.h2)`
+  text-align: center;
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   font-family: ${({ theme }) => theme.font.body};

@@ -10,10 +10,10 @@ const StyledHeader = styled(animated.header)`
   background: white;
   display: flex;
   justify-content: center;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 80;
   border-bottom: 1px solid ${({ theme }) => theme.colors.light};
   ${fluidRange(
@@ -25,10 +25,17 @@ const StyledHeader = styled(animated.header)`
     '400px',
     '1000px'
   )}
+`
 
-  h2 {
-    margin: -5px 0 0;
-    ${fluidRange(
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const Logo = styled.h2`
+  margin: -5px 0 0;
+  ${fluidRange(
     {
       prop: 'font-size',
       fromSize: '18px',
@@ -38,21 +45,14 @@ const StyledHeader = styled(animated.header)`
     '1000px'
   )}
 
-    a {
-      border-bottom: none;
+  a {
+    border-bottom: none;
 
-      &:hover {
-        font-style: normal;
-        color: inherit;
-      }
+    &:hover {
+      font-style: normal;
+      color: inherit;
     }
   }
-`
-
-const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `
 
 const Header = () => {
@@ -70,11 +70,11 @@ const Header = () => {
   return (
     <StyledHeader style={headerProps}>
       <MenuButton />
-      <Logo>
-        <h2>
+      <LogoContainer>
+        <Logo>
           <Link to="/">James &amp; Sophie</Link>
-        </h2>
-      </Logo>
+        </Logo>
+      </LogoContainer>
       <Menu />
     </StyledHeader>
   )

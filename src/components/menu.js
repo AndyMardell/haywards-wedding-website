@@ -36,8 +36,14 @@ const Nav = styled(animated.nav)`
     '400px',
     '1000px'
   )}
+`
 
-  ul li a {
+const List = styled.ul`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li a {
     font-family: ${({ theme }) => theme.font.headings};
     border-bottom-width: 4px;
     font-weight: 300;
@@ -46,12 +52,6 @@ const Nav = styled(animated.nav)`
       color: ${({ theme }) => theme.colors.gold};
     }
   }
-`
-
-const List = styled.ul`
-  padding: 0;
-  margin: 0;
-  list-style: none;
 `
 
 const menuItems = [
