@@ -24,15 +24,6 @@ const StyledIntro = styled(animated.div)`
     '400px',
     '1000px'
   )}
-  ${fluidRange(
-    {
-      prop: 'font-size',
-      fromSize: '13px',
-      toSize: '18px'
-    },
-    '400px',
-    '1000px'
-  )}
 
   p {
     max-width: 550px;
