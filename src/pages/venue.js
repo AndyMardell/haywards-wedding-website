@@ -29,8 +29,8 @@ const Venue = () => {
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
       </Intro>
-      <AnimatedImage style={fadeIn(1500)} file="burymanor" />
-      <Content columns>
+      <AnimatedImage style={fadeIn(1500)} height={350} file="dorsetHouse" />
+      <Content css="margin-top: 2em;" columns>
         <AnimatedBlock style={fadeIn(2000)}>
           <h3>Directions</h3>
           <p>

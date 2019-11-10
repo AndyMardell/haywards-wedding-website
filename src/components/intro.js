@@ -35,9 +35,11 @@ const Intro = ({ children }) => {
   const introSpring = useSpring({
     config: config.molasses,
     from: {
-      opacity: 0
+      opacity: 0,
+      transform: 'translateY(30px)'
     },
-    opacity: 1
+    opacity: 1,
+    transform: 'translateY(0px)'
   })
 
   return <StyledIntro style={introSpring}>{children}</StyledIntro>

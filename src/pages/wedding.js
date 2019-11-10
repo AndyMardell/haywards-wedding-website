@@ -30,8 +30,8 @@ const Wedding = () => {
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </p>
       </Intro>
-      <AnimatedImage style={fadeIn(1500)} file="driedflowers" height={200} />
-      <Content columns>
+      <AnimatedImage style={fadeIn(1500)} file="rings" height={300} />
+      <Content css="margin-top: 2em" columns>
         <AnimatedBlock style={fadeIn(2000)}>
           <h3>Ceremony</h3>
           <p>
