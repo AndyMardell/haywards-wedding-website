@@ -4,14 +4,15 @@ import { ContextProvider } from '../context'
 import { ThemeProvider } from 'styled-components'
 import theme from '../styles/theme'
 import GlobalStyle from '../styles/global'
+import SwipeProvider from './swipeProvider'
 
 const Layout = ({ children, location }) => (
   <ContextProvider location={location}>
     <ThemeProvider theme={theme}>
-      <>
+      <SwipeProvider>
         <GlobalStyle />
         {children}
-      </>
+      </SwipeProvider>
     </ThemeProvider>
   </ContextProvider>
 )

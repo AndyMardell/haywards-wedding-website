@@ -146,12 +146,8 @@ const Burger = styled.div`
 `
 
 const MenuButton = ({ fixed }) => {
-  const [context, setContext] = useContext(Context)
-  const toggleMenu = () =>
-    setContext({
-      ...context,
-      showMenu: !context.showMenu
-    })
+  const { context, setContext } = useContext(Context)
+  const toggleMenu = () => setContext({ showMenu: !context.showMenu })
 
   return (
     <Button fixed={fixed} open={context.showMenu} onClick={toggleMenu}>

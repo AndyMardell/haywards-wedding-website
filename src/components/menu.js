@@ -63,8 +63,8 @@ const menuItems = [
 ]
 
 const Menu = () => {
-  const [context, setContext] = useContext(Context)
-  const hideMenu = () => setContext({ ...context, showMenu: false })
+  const { context, setContext } = useContext(Context)
+  const hideMenu = () => setContext({ showMenu: false })
 
   const springRef = useRef()
   const springProps = useSpring({

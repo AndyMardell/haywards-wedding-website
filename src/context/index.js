@@ -1,14 +1,17 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useReducer } from 'react'
 import PropTypes from 'prop-types'
 
 const defaultContextValue = { showMenu: false }
 const Context = createContext(defaultContextValue)
 
 const ContextProvider = ({ children }) => {
-  const [context, setContext] = useState(defaultContextValue)
+  const [context, setContext] = useReducer(
+    (context, newContext) => ({ ...context, ...newContext }),
+    defaultContextValue
+  )
 
   return (
-    <Context.Provider value={[context, setContext]}>
+    <Context.Provider value={{ context, setContext }}>
       {children}
     </Context.Provider>
   )
