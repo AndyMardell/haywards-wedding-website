@@ -24,19 +24,19 @@ const Main = styled.main`
   ${fluidRange(
     {
       prop: 'padding-left',
-      fromSize: '1rem',
-      toSize: '2rem'
+      fromSize: '20px',
+      toSize: '40px'
     },
-    '400px',
+    '300px',
     '1000px'
   )}
   ${fluidRange(
     {
       prop: 'padding-right',
-      fromSize: '1rem',
-      toSize: '2rem'
+      fromSize: '20px',
+      toSize: '40px'
     },
-    '400px',
+    '300px',
     '1000px'
   )}
 `

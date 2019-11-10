@@ -32,11 +32,12 @@ a {
   border-bottom: 2px solid ${({ theme }) => theme.colors.gold};
 
   &:hover {
-    font-style: italic;
+    color: ${({ theme }) => theme.colors.gold};
   }
 
   &:focus {
-    border-color: ${({ theme }) => theme.colors.grey};
+    color: ${({ theme }) => theme.colors.gold};
+    border-color: ${({ theme }) => theme.colors.dark};
   }
 }
 

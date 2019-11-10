@@ -5,7 +5,7 @@ const useAnimate = (props = {}) => {
   const [finished, setFinished] = useState(false)
 
   const trigger = typeof props.trigger !== 'undefined' ? props.trigger : true
-  const once = typeof props.trigger !== 'undefined' ? props.once : true
+  const once = typeof props.once !== 'undefined' ? props.once : true
   const defaultConfig = {
     config: springConfig.molasses,
     from: {
@@ -15,13 +15,17 @@ const useAnimate = (props = {}) => {
     opacity: trigger || finished ? 1 : 0,
     transform: trigger || finished ? 'translateY(0)' : 'translateY(30px)'
   }
-  const config = props.config || defaultConfig
 
   useEffect(() => {
     if (trigger && once) setFinished(true)
   }, [trigger])
 
-  const spring = (delay = 0) => useSpring({ ...config, delay })
+  const spring = (delay = 0) =>
+    useSpring({
+      ...(props.config || defaultConfig),
+      delay
+    })
+
   return spring
 }
 

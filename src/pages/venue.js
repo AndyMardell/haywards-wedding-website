@@ -5,11 +5,13 @@ import Image from '../components/image'
 import Intro from '../components/intro'
 import Content from '../components/content'
 import Info from '../components/info'
+import Block from '../components/block'
 import { animated } from 'react-spring'
 import useIsInViewport from 'use-is-in-viewport'
 import useAnimate from '../hooks/useAnimate'
 
 const AnimatedImage = animated(Image)
+const AnimatedBlock = animated(Block)
 
 const Venue = () => {
   const fadeIn = useAnimate()
@@ -29,7 +31,7 @@ const Venue = () => {
       </Intro>
       <AnimatedImage style={fadeIn(1500)} file="burymanor" />
       <Content columns>
-        <animated.div style={fadeIn(2000)}>
+        <AnimatedBlock style={fadeIn(2000)}>
           <h3>Directions</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -51,8 +53,8 @@ const Venue = () => {
           >
             Get directions &rarr;
           </a>
-        </animated.div>
-        <animated.div style={fadeIn(2000)}>
+        </AnimatedBlock>
+        <AnimatedBlock style={fadeIn(2000)}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81124.9118791682!2d-0.6254395201308203!3d50.90865390973439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDU0JzMxLjEiTiAwwrAzMycxNy41Ilc!5e0!3m2!1sen!2suk!4v1564734402227!5m2!1sen!2suk"
             width="600"
@@ -65,11 +67,11 @@ const Venue = () => {
             }}
             allowFullScreen
           />
-        </animated.div>
+        </AnimatedBlock>
       </Content>
       <Content>
-        <animated.div ref={wrappedRef} style={fadeInTrigger()}>
-          <h3>Travel Information</h3>
+        <AnimatedBlock style={fadeInTrigger()}>
+          <h3 ref={wrappedRef}>Travel Information</h3>
           <p>
             Proin aliquet lacus nibh. Duis pharetra mattis erat, vitae blandit
             nibh aliquet vel. Nam varius mi eu sem feugiat, cursus sodales eros
@@ -77,7 +79,7 @@ const Venue = () => {
             vitae lectus id justo finibus tristique in vulputate turpis. Fusce
             nec sodales diam. Suspendisse potenti.
           </p>
-        </animated.div>
+        </AnimatedBlock>
       </Content>
     </Layout>
   )

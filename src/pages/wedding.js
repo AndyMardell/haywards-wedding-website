@@ -6,10 +6,12 @@ import Image from '../components/image'
 import Intro from '../components/intro'
 import Content from '../components/content'
 import Info from '../components/info'
+import Block from '../components/block'
 import { animated } from 'react-spring'
 import useIsInViewport from 'use-is-in-viewport'
 import useAnimate from '../hooks/useAnimate'
 
+const AnimatedBlock = animated(Block)
 const AnimatedImage = animated(Image)
 
 const Wedding = () => {
@@ -30,7 +32,7 @@ const Wedding = () => {
       </Intro>
       <AnimatedImage style={fadeIn(1500)} file="driedflowers" height={200} />
       <Content columns>
-        <animated.div style={fadeIn(2000)}>
+        <AnimatedBlock style={fadeIn(2000)}>
           <h3>Ceremony</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -43,8 +45,8 @@ const Wedding = () => {
             <br />
             <Link to="/venue/">Map & Directions &rarr;</Link>
           </Info>
-        </animated.div>
-        <animated.div style={fadeIn(2200)}>
+        </AnimatedBlock>
+        <AnimatedBlock style={fadeIn(2200)}>
           <h3>Reception</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -57,9 +59,9 @@ const Wedding = () => {
             <br />
             <Link to="/venue/">Map & Directions &rarr;</Link>
           </Info>
-        </animated.div>
-        <animated.div ref={wrappedNotesRef} style={fadeInTrigger(0)}>
-          <h3>Important Notes</h3>
+        </AnimatedBlock>
+        <AnimatedBlock style={fadeInTrigger(0)}>
+          <h3 ref={wrappedNotesRef}>Important Notes</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
             turpis non, accumsan imperdiet orci oun cuaamsan.
@@ -73,8 +75,8 @@ const Wedding = () => {
             <br />
             4. No having fun
           </Info>
-        </animated.div>
-        <animated.div style={fadeInTrigger(200)}>
+        </AnimatedBlock>
+        <AnimatedBlock style={fadeInTrigger(200)}>
           <h3>RSVP</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -89,7 +91,7 @@ const Wedding = () => {
             <br />
             ***REMOVED***
           </Info>
-        </animated.div>
+        </AnimatedBlock>
       </Content>
     </Layout>
   )

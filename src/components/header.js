@@ -43,6 +43,7 @@ const StyledHeader = styled(animated.header)`
 
       &:hover {
         font-style: normal;
+        color: inherit;
       }
     }
   }

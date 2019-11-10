@@ -114,10 +114,6 @@ const Burger = styled.div`
       margin-bottom: 0;
     }
 
-    @media only screen and (max-width: 600px) {
-      margin-bottom: 4px;
-    }
-
     ${({ open, fixed, theme }) =>
     fixed &&
       `

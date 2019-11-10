@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyledContent = styled.div`
-  padding: 3%;
-
   ${({ columns }) =>
     columns &&
     `
@@ -18,22 +16,25 @@ const StyledContent = styled.div`
 
     & > div {
       width: 42%;
-      padding: 2rem;
 
       @media only screen and (max-width: 700px) {
-        width: 93%;
+        width: 100%;
       }
     }
   `}
 `
 
-const Content = ({ children, columns }) => (
-  <StyledContent columns={columns}>{children}</StyledContent>
+const Content = ({ children, columns, className, style }) => (
+  <StyledContent columns={columns} className={className} style={style}>
+    {children}
+  </StyledContent>
 )
 
 Content.propTypes = {
   children: PropTypes.node,
-  columns: PropTypes.bool
+  columns: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object
 }
 
 export default Content

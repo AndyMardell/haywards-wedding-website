@@ -3,27 +3,19 @@ import { Link } from 'gatsby'
 import LayoutSplash from '../layouts/splash'
 import SEO from '../components/seo'
 import HeaderSplash from '../components/headerSplash'
+import Content from '../components/content'
 import styled from 'styled-components'
-import { fluidRange } from 'polished'
 import P from '../components/paragraph'
 import { config, animated } from 'react-spring'
 import useIsInViewport from 'use-is-in-viewport'
 import useAnimate from '../hooks/useAnimate'
 
-const Container = styled.div`
+const Container = styled(Content)`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-  & > div {
-    text-align: center;
-    ${fluidRange(
-    { prop: 'padding', fromSize: '15px', toSize: '30px' },
-    '400px',
-    '1000px'
-  )}
-  }
+  text-align: center;
 `
 
 const IndexPage = () => {

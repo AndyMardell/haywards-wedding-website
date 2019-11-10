@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import Image from '../components/image'
 import Intro from '../components/intro'
 import Content from '../components/content'
+import Block from '../components/block'
 import styled from 'styled-components'
 import { fluidRange } from 'polished'
 import airbnb from '../images/airbnb.svg'
@@ -12,6 +13,7 @@ import { animated } from 'react-spring'
 import useAnimate from '../hooks/useAnimate'
 
 const AnimatedImage = animated(Image)
+const AnimatedBlock = animated(Block)
 
 const Icon = styled.img`
   margin-top: 20px;
@@ -24,11 +26,6 @@ const Icon = styled.img`
     '400px',
     '1000px'
   )}
-`
-
-const AccommodationContainer = styled(animated.div)`
-  text-align: center;
-  margin-top: 3rem;
 `
 
 const Accommodation = () => {
@@ -46,7 +43,7 @@ const Accommodation = () => {
       </Intro>
       <AnimatedImage style={fadeIn(1500)} file="accommodation" />
       <Content columns>
-        <AccommodationContainer style={fadeIn(2000)}>
+        <AnimatedBlock center style={fadeIn(2000)}>
           <Icon src={airbnb} alt="Airbnb" />
           <h4>Airbnb</h4>
           <p>
@@ -60,8 +57,8 @@ const Accommodation = () => {
           >
             Visit Airbnb &rarr;
           </a>
-        </AccommodationContainer>
-        <AccommodationContainer style={fadeIn(2200)}>
+        </AnimatedBlock>
+        <AnimatedBlock center style={fadeIn(2200)}>
           <Icon src={hotel} alt="Hotel" />
           <h4>Hotels</h4>
           <p>
@@ -75,7 +72,7 @@ const Accommodation = () => {
           >
             Visit Google Maps &rarr;
           </a>
-        </AccommodationContainer>
+        </AnimatedBlock>
       </Content>
     </Layout>
   )

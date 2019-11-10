@@ -43,7 +43,7 @@ const Nav = styled(animated.nav)`
     font-weight: 300;
 
     &.current {
-      font-style: italic;
+      color: ${({ theme }) => theme.colors.gold};
     }
   }
 `
