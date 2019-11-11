@@ -10,14 +10,15 @@ import useAnimate from '../hooks/useAnimate'
 
 const HeaderSplash = styled.div`
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(100vh - 4vw);
+  height: calc(var(--vh, 1vh) * 100 - 4vw);
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
+  top: 2vw;
+  left: 2vw;
+  right: 2vw;
+  overflow: hidden;
 `
 
 const H1 = styled(animated.h1)`
@@ -75,10 +76,10 @@ const H2 = styled(animated.h2)`
 `
 
 const StyledBackground = styled(Image)`
-  bottom: 2vw;
-  left: 2vw;
-  right: 2vw;
-  top: 2vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: -1;
 `
 
@@ -93,7 +94,12 @@ const Splash = () => {
           <H2 style={fadeIn(800)}>We&apos;re getting married</H2>
         </div>
         <Scroll />
-        <StyledBackground file="autumn" absolute />
+        <StyledBackground
+          file="autumn"
+          absolute
+          scale
+          objectPosition="bottom center"
+        />
       </HeaderSplash>
       <MenuButton fixed />
       <Menu />

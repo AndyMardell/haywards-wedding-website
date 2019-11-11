@@ -8,6 +8,7 @@ const AnimatedImg = animated(Img)
 const StyledGallery = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: -1.5em;
 
   & > div {
     width: 25%;

@@ -15,6 +15,16 @@ body {
   color: ${({ theme }) => theme.colors.grey};
   line-height: 2;
 
+  ${fluidRange(
+    {
+      prop: 'font-size',
+      fromSize: '14px',
+      toSize: '16px'
+    },
+    '400px',
+    '1000px'
+  )}
+
   &.body--no-overflow {
     overflow: hidden;
   }
