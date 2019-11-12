@@ -49,7 +49,7 @@ const PartyGallery = () => {
     opacity: 1,
     x: 0,
     height: 80,
-    delay: 1500
+    delay: 400
   })
 
   return (

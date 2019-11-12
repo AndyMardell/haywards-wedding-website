@@ -42,9 +42,9 @@ const Accommodation = () => {
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </P>
       </Intro>
-      <AnimatedImage style={fadeIn(1500)} file="accommodation" />
+      <AnimatedImage style={fadeIn(250)} file="accommodation" />
       <Content css="margin-top: 2em" columns>
-        <AnimatedBlock center style={fadeIn(2000)}>
+        <AnimatedBlock center style={fadeIn(500)}>
           <Icon src={airbnb} alt="Airbnb" />
           <h4>Airbnb</h4>
           <p>
@@ -59,7 +59,7 @@ const Accommodation = () => {
             View Airbnbs &rarr;
           </a>
         </AnimatedBlock>
-        <AnimatedBlock center style={fadeIn(2200)}>
+        <AnimatedBlock center style={fadeIn(750)}>
           <Icon src={hotel} alt="Hotel" />
           <h4>Hotels</h4>
           <p>

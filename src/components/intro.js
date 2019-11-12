@@ -10,8 +10,8 @@ const StyledIntro = styled(animated.div)`
   ${fluidRange(
     {
       prop: 'padding-top',
-      fromSize: '35px',
-      toSize: '90px'
+      fromSize: '40px',
+      toSize: '100px'
     },
     '400px',
     '1000px'

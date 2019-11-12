@@ -57,14 +57,14 @@ const Logo = styled.h2`
 
 const Header = () => {
   const headerProps = useSpring({
-    config: config.gentle,
+    config: config.slow,
     from: {
       opacity: 0,
       top: '-80px'
     },
     opacity: 1,
     top: '0px',
-    delay: 2000
+    delay: 250
   })
 
   return (

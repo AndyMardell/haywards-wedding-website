@@ -45,11 +45,16 @@ const List = styled.ul`
 
   li a {
     font-family: ${({ theme }) => theme.font.headings};
-    border-bottom-width: 4px;
+    border-bottom: none;
     font-weight: 300;
+    opacity: 0.5;
+    color: ${({ theme }) => theme.colors.dark};
 
+    &:hover,
     &.current {
-      color: ${({ theme }) => theme.colors.gold};
+      opacity: 1;
+      color: ${({ theme }) => theme.colors.dark};
+      border-bottom: 4px solid ${({ theme }) => theme.colors.gold};
     }
   }
 `

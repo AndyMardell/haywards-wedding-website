@@ -16,9 +16,12 @@ const AnimatedBlock = animated(Block)
 const AnimatedImage = animated(Image)
 
 const Wedding = () => {
-  const notesRef = useRef(null)
-  const [isInViewport, wrappedNotesRef] = useIsInViewport({ target: notesRef })
   const fadeIn = useAnimate()
+  const notesRef = useRef(null)
+  const [isInViewport, wrappedNotesRef] = useIsInViewport({
+    target: notesRef,
+    modBottom: '-10%'
+  })
   const fadeInTrigger = useAnimate({ trigger: isInViewport })
 
   return (
@@ -31,9 +34,9 @@ const Wedding = () => {
           turpis non, accumsan imperdiet orci oun cuaamsan.
         </P>
       </Intro>
-      <AnimatedImage style={fadeIn(1500)} file="rings" height={300} />
+      <AnimatedImage style={fadeIn(250)} file="rings" height={300} />
       <Content css="margin-top: 2em" columns>
-        <AnimatedBlock style={fadeIn(2000)}>
+        <AnimatedBlock style={fadeIn(500)}>
           <h3>Ceremony</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -47,7 +50,7 @@ const Wedding = () => {
             <Link to="/venue/">Map & Directions &rarr;</Link>
           </Info>
         </AnimatedBlock>
-        <AnimatedBlock style={fadeIn(2200)}>
+        <AnimatedBlock style={fadeIn(750)}>
           <h3>Reception</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
@@ -77,7 +80,7 @@ const Wedding = () => {
             4. No having fun
           </Info>
         </AnimatedBlock>
-        <AnimatedBlock style={fadeInTrigger(200)}>
+        <AnimatedBlock style={fadeInTrigger(250)}>
           <h3>RSVP</h3>
           <p>
             Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
