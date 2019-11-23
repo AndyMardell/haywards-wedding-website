@@ -41,14 +41,26 @@ const PartyGallery = () => {
   return (
     <StyledGallery>
       {trail.map(({ x, height, ...rest }, index) => (
-        <AnimatedImg
-          key={index}
-          fluid={members[index][context.sillyMode ? 'sillyImage' : 'image']}
-          style={{
-            ...rest,
-            transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
-          }}
-        />
+        <>
+          <AnimatedImg
+            key={index}
+            fluid={members[index].image}
+            style={{
+              ...rest,
+              display: context.sillyMode ? 'none' : 'block',
+              transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
+            }}
+          />
+          <AnimatedImg
+            key={index}
+            fluid={members[index].sillyImage}
+            style={{
+              ...rest,
+              display: context.sillyMode ? 'block' : 'none',
+              transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
+            }}
+          />
+        </>
       ))}
     </StyledGallery>
   )
