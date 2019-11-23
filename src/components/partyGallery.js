@@ -1,8 +1,9 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React, { useContext } from 'react'
+import Context from '../context'
 import Img from 'gatsby-image'
 import { useTrail, animated } from 'react-spring'
 import styled from 'styled-components'
+import useWeddingParty from '../hooks/useWeddingParty'
 const AnimatedImg = animated(Img)
 
 const StyledGallery = styled.div`
@@ -22,25 +23,10 @@ const StyledGallery = styled.div`
 `
 
 const PartyGallery = () => {
-  const { allFile } = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativeDirectory: { eq: "party" } }) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              fluid(maxWidth: 295) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const { context } = useContext(Context)
+  const members = useWeddingParty()
 
-  const trail = useTrail(allFile.edges.length, {
+  const trail = useTrail(members.length, {
     from: {
       opacity: 0,
       x: 20,
@@ -57,7 +43,7 @@ const PartyGallery = () => {
       {trail.map(({ x, height, ...rest }, index) => (
         <AnimatedImg
           key={index}
-          fluid={allFile.edges[index].node.childImageSharp.fluid}
+          fluid={members[index][context.sillyMode ? 'sillyImage' : 'image']}
           style={{
             ...rest,
             transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
