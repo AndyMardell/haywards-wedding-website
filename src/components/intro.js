@@ -25,6 +25,10 @@ const StyledIntro = styled(animated.div)`
     '400px',
     '1000px'
   )}
+
+  p {
+    margin-bottom: 0;
+  }
 `
 
 const Intro = ({ children }) => {
