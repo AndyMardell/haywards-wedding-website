@@ -35,7 +35,7 @@ const Wedding = () => {
         </P>
       </Intro>
       <AnimatedImage style={fadeIn(250)} file="rings" height={300} />
-      <Content css="margin-top: 2em" columns>
+      <Content css="margin-top: 2em" columns top>
         <AnimatedBlock style={fadeIn(500)}>
           <h3>Ceremony</h3>
           <p>
@@ -90,15 +90,6 @@ const Wedding = () => {
             please could you respond by <strong>31st August 2020</strong> at the
             latest, including any dietary requirements you have.
           </p>
-          <Info>
-            James & Sophie
-            <br />
-            ***REMOVED***
-            <br />
-            ***REMOVED***
-            <br />
-            ***REMOVED***
-          </Info>
         </AnimatedBlock>
       </Content>
     </Layout>

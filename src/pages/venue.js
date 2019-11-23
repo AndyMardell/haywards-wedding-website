@@ -76,14 +76,17 @@ const Venue = () => {
           />
         </AnimatedBlock>
       </Content>
-      <Content>
+      <Content narrow>
         <AnimatedBlock style={fadeInTrigger()}>
-          <h3 ref={wrappedRef}>Travel Information</h3>
+          <h3 ref={wrappedRef}>Car Parking &amp; Taxis</h3>
           <p>
             There will be a free car park for guests, you are welcome to leave
-            your cars overnight but please collect them as soon as you are able
-            to the next day. If you are planning on taking a taxi home, please
-            pre-book before the day as there is limited signal at the venue.
+            your cars overnight but please collect them{' '}
+            <strong>before midday</strong> the next day.
+          </p>
+          <p>
+            If you are planning on taking a taxi home, please pre-book before
+            the day as there is limited signal at the venue.
           </p>
         </AnimatedBlock>
       </Content>
