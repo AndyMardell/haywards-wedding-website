@@ -8,6 +8,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.39",
     "gatsby-image": "^2.2.6",
+    "gatsby-plugin-google-analytics": "^2.1.28",
     "gatsby-plugin-layout": "^1.1.2",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-offline": "^3.0.22",
@@ -55,7 +56,8 @@
     "format": "prettier-eslint --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "upgrade-interactive": "npm-check --update"
+    "upgrade-interactive": "npm-check --update",
+    "check": "npm-check"
   },
   "repository": {
     "type": "git",
