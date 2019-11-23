@@ -1,4 +1,4 @@
-# Hayward's Wedding website 💒
+# Hayward's Wedding Website 💒
 
 A gatsby site for the Hayward's wedding.
 
