@@ -19,7 +19,7 @@ body {
     {
       prop: 'font-size',
       fromSize: '14px',
-      toSize: '16px'
+      toSize: '17px'
     },
     '400px',
     '1000px'
@@ -141,7 +141,7 @@ p {
     {
       prop: 'margin-top',
       fromSize: '10px',
-      toSize: '20px'
+      toSize: '25px'
     },
     '400px',
     '1000px'
@@ -150,7 +150,7 @@ p {
     {
       prop: 'margin-bottom',
       fromSize: '10px',
-      toSize: '20px'
+      toSize: '25px'
     },
     '400px',
     '1000px'

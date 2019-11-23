@@ -3,7 +3,8 @@ export default {
     dark: '#222222',
     gold: '#DD934D',
     grey: '#666666',
-    light: '#DDDDDD'
+    light: '#DDDDDD',
+    white: '#FFFFFF'
   },
   font: {
     headings: "'Playfair Display', 'Georgia', 'Times New Roman', serif",

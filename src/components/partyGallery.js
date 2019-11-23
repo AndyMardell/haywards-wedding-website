@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import { useTrail, animated } from 'react-spring'
 import styled from 'styled-components'
 import useWeddingParty from '../hooks/useWeddingParty'
-const AnimatedImg = animated(Img)
 
 const StyledGallery = styled.div`
   display: flex;
@@ -41,26 +40,26 @@ const PartyGallery = () => {
   return (
     <StyledGallery>
       {trail.map(({ x, height, ...rest }, index) => (
-        <>
-          <AnimatedImg
-            key={index}
+        <animated.div
+          key={index}
+          style={{
+            ...rest,
+            transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
+          }}
+        >
+          <Img
             fluid={members[index].image}
             style={{
-              ...rest,
-              display: context.sillyMode ? 'none' : 'block',
-              transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
+              display: context.sillyMode ? 'none' : 'block'
             }}
           />
-          <AnimatedImg
-            key={index}
+          <Img
             fluid={members[index].sillyImage}
             style={{
-              ...rest,
-              display: context.sillyMode ? 'block' : 'none',
-              transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
+              display: context.sillyMode ? 'block' : 'none'
             }}
           />
-        </>
+        </animated.div>
       ))}
     </StyledGallery>
   )
