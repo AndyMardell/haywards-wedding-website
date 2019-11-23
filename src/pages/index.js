@@ -31,10 +31,10 @@ const IndexPage = () => {
           <animated.div ref={animatedDiv} style={fadeInTrigger()}>
             <h2>31 October 2020</h2>
             <P narrow>
-              Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-              turpis non, accumsan imperdiet orci oun cuaamsan.
+              We are looking forward to spending our big day with you all at
+              Bury Manor Barn, click through for more information.
             </P>
-            <Link to="/wedding">More about our big day &rarr;</Link>
+            <Link to="/wedding">More about our special day &rarr;</Link>
           </animated.div>
         </Container>
       </LayoutSplash>

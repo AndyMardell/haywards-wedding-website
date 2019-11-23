@@ -29,8 +29,9 @@ const Venue = () => {
       <Intro>
         <h1>Venue &amp; Travel</h1>
         <P narrow>
-          Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-          turpis non, accumsan imperdiet orci oun cuaamsan.
+          Our venue is located at Dorset House School in Pulborough, West
+          Sussex. Please find a map and directions below, we will also place
+          signs down the country lane to help guide you on the day.
         </P>
       </Intro>
       <AnimatedImage style={fadeIn(250)} height={350} file="dorsetHouse" />
@@ -38,8 +39,10 @@ const Venue = () => {
         <AnimatedBlock style={fadeIn(500)}>
           <h3>Directions</h3>
           <p>
-            Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-            turpis non, accumsan imperdiet orci oun cuaamsan.
+            If you are using a satnav for directions, you will be directed to
+            Dorset House School. This is correct so don&apos;t worry about going
+            to the wrong place! Our venue is located inside the school grounds,
+            off a small country lane.
           </p>
           <Info>
             <strong>Bury Manor Barn</strong>
@@ -77,11 +80,10 @@ const Venue = () => {
         <AnimatedBlock style={fadeInTrigger()}>
           <h3 ref={wrappedRef}>Travel Information</h3>
           <p>
-            Proin aliquet lacus nibh. Duis pharetra mattis erat, vitae blandit
-            nibh aliquet vel. Nam varius mi eu sem feugiat, cursus sodales eros
-            imperdiet. Praesent pulvinar hendrerit ligula ut interdum. Nullam
-            vitae lectus id justo finibus tristique in vulputate turpis. Fusce
-            nec sodales diam. Suspendisse potenti.
+            There will be a free car park for guests, you are welcome to leave
+            your cars overnight but please collect them as soon as you are able
+            to the next day. If you are planning on taking a taxi home, please
+            pre-book before the day as there is limited signal at the venue.
           </p>
         </AnimatedBlock>
       </Content>

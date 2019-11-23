@@ -30,8 +30,8 @@ const Wedding = () => {
       <Intro>
         <h1>The Wedding</h1>
         <P narrow>
-          Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-          turpis non, accumsan imperdiet orci oun cuaamsan.
+          All the important information you&apos;ll need to know before joining
+          us on our wedding day.
         </P>
       </Intro>
       <AnimatedImage style={fadeIn(250)} file="rings" height={300} />
@@ -39,36 +39,39 @@ const Wedding = () => {
         <AnimatedBlock style={fadeIn(500)}>
           <h3>Ceremony</h3>
           <p>
-            Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-            turpis non, accumsan imperdiet orci oun cuaamsan.
+            If day guests could please arrive at 12pm to be seated for a 1pm
+            ceremony. You can find the address below; further information can be
+            found on the <Link to="venue">Venue &amp; travel</Link> page.
           </p>
           <Info>
-            2pm on 31 October 2020
+            1pm on 31 October 2020
             <br />
             Bury Manor Barn, West Sussex, RH20 1PB
             <br />
-            <Link to="/venue/">Map & Directions &rarr;</Link>
+            <Link to="venue">Map & Directions &rarr;</Link>
           </Info>
         </AnimatedBlock>
         <AnimatedBlock style={fadeIn(750)}>
           <h3>Reception</h3>
           <p>
-            Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-            turpis non, accumsan imperdiet orci oun cuaamsan.
+            Evening guests are welcome to join in the celebrations from 7pm. The
+            reception will take place at the same venue as the ceremony. Further
+            information can be found on the{' '}
+            <Link to="venue">Venue &amp; travel</Link> page.
           </p>
           <Info>
             7pm on 31 October 2020
             <br />
             Bury Manor Barn, West Sussex, RH20 1PB
             <br />
-            <Link to="/venue/">Map & Directions &rarr;</Link>
+            <Link to="venue">Map & Directions &rarr;</Link>
           </Info>
         </AnimatedBlock>
         <AnimatedBlock style={fadeInTrigger(0)}>
           <h3 ref={wrappedNotesRef}>Important Notes</h3>
           <p>
-            Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-            turpis non, accumsan imperdiet orci oun cuaamsan.
+            Our venue has a few requests that we ask that our guests please take
+            note of:
           </p>
           <Info>
             1. No stiletto heels
@@ -77,14 +80,15 @@ const Wedding = () => {
             <br />
             3. Cash only bar
             <br />
-            4. No having fun
+            4. No little ones in the daytime
           </Info>
         </AnimatedBlock>
         <AnimatedBlock style={fadeInTrigger(250)}>
           <h3>RSVP</h3>
           <p>
-            Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-            turpis non, accumsan imperdiet orci oun cuaamsan.
+            Information regarding RSVP&apos;s can be found on your invites,
+            please could you respond by <strong>31st August 2020</strong> at the
+            latest, including any dietary requirements you have.
           </p>
           <Info>
             James & Sophie

@@ -11,8 +11,8 @@ const WeddingParty = () => (
     <Intro>
       <h1>Wedding Party</h1>
       <P narrow>
-        Fusce sollicitudin congue vestibulum. Ut dui augu, luctus sit amet
-        turpis non, accumsan imperdiet orci oun cuaamsan.
+        The lucky and extremely honoured individuals we chose to accompany us
+        throughout our day!
       </P>
     </Intro>
     <PartyGallery />
