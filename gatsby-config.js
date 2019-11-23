@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `James and Sophie`,
+    title: `James &amp; Sophie`,
     description: `We're getting married on 31st October 2020`,
     author: `@AndyMardell`
   },
@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `james-sophie-wedding`,
+        name: `James & Sophie's Wedding`,
         short_name: `James & Sophie`,
         start_url: `/`,
         background_color: `#FFFFFF`,
