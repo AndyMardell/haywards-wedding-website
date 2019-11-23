@@ -1,94 +1,111 @@
+import { useState, useEffect } from 'react'
 import usePartyPhotos from './usePartyPhotos'
 
-const useWeddingParty = () => {
-  const members = usePartyPhotos()
+const useWeddingParty = ref => {
+  const membersPhotos = usePartyPhotos()
+  const [membersArray, setMembersArray] = useState([])
 
-  return [
+  const infoArr = [
     {
       name: 'Mike',
       id: 'mike',
       bio: 'Something about mike',
-      image: members['mike'].childImageSharp.fluid,
-      sillyImage: members['sillymike'].childImageSharp.fluid
+      image: membersPhotos.mike.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillymike.childImageSharp.fluid
     },
     {
       name: 'Dave',
       id: 'dave',
       bio: 'Something about dave',
-      image: members['dave'].childImageSharp.fluid,
-      sillyImage: members['sillydave'].childImageSharp.fluid
+      image: membersPhotos.dave.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillydave.childImageSharp.fluid
     },
     {
       name: 'Nick',
       id: 'nick',
       bio: 'Something about nick',
-      image: members['nick'].childImageSharp.fluid,
-      sillyImage: members['sillynick'].childImageSharp.fluid
+      image: membersPhotos.nick.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillynick.childImageSharp.fluid
     },
     {
       name: 'Oli',
       id: 'oli',
       bio: 'Something about oli',
-      image: members['oli'].childImageSharp.fluid,
-      sillyImage: members['sillyoli'].childImageSharp.fluid
+      image: membersPhotos.oli.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillyoli.childImageSharp.fluid
     },
     {
       name: 'Andy',
       id: 'andy',
       bio: 'Something about andy',
-      image: members['andy'].childImageSharp.fluid,
-      sillyImage: members['sillyandy'].childImageSharp.fluid
+      image: membersPhotos.andy.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillyandy.childImageSharp.fluid
     },
     {
       name: 'Scott',
       id: 'scott',
       bio: 'Something about scott',
-      image: members['scott'].childImageSharp.fluid,
-      sillyImage: members['sillyscott'].childImageSharp.fluid
+      image: membersPhotos.scott.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillyscott.childImageSharp.fluid
     },
     {
       name: 'Emily',
       id: 'emily',
       bio: 'Something about emily',
-      image: members['emily'].childImageSharp.fluid,
-      sillyImage: members['sillyemily'].childImageSharp.fluid
+      image: membersPhotos.emily.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillyemily.childImageSharp.fluid
     },
     {
       name: 'Becky',
       id: 'becky',
       bio: 'Something about becky',
-      image: members['becky'].childImageSharp.fluid,
-      sillyImage: members['sillybecky'].childImageSharp.fluid
+      image: membersPhotos.becky.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillybecky.childImageSharp.fluid
     },
     {
       name: 'Ellie',
       id: 'ellie',
       bio: 'Something about ellie',
-      image: members['ellie'].childImageSharp.fluid,
-      sillyImage: members['sillyellie'].childImageSharp.fluid
+      image: membersPhotos.ellie.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillyellie.childImageSharp.fluid
     },
     {
       name: 'Emma',
       id: 'emma',
       bio: 'Something about emma',
-      image: members['emma'].childImageSharp.fluid,
-      sillyImage: members['sillyemma'].childImageSharp.fluid
+      image: membersPhotos.emma.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillyemma.childImageSharp.fluid
     },
     {
       name: 'Lucy',
       id: 'lucy',
       bio: 'Something about lucy',
-      image: members['lucy'].childImageSharp.fluid,
-      sillyImage: members['sillylucy'].childImageSharp.fluid
+      image: membersPhotos.lucy.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillylucy.childImageSharp.fluid
     },
     {
       name: 'Mandy',
       id: 'mandy',
       bio: 'Something about mandy',
-      image: members['mandy'].childImageSharp.fluid,
-      sillyImage: members['sillymandy'].childImageSharp.fluid
+      image: membersPhotos.mandy.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillymandy.childImageSharp.fluid
     }
   ]
+
+  useEffect(() => {
+    setMembersArray(shuffle(infoArr))
+  }, [ref])
+
+  return membersArray
+}
+
+const shuffle = arr => {
+  const newArr = arr.slice()
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const rand = Math.floor(Math.random() * (i + 1))
+    ;[newArr[i], newArr[rand]] = [newArr[rand], newArr[i]]
+  }
+  return newArr
 }
 
 export default useWeddingParty
