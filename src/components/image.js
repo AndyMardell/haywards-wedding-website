@@ -17,21 +17,7 @@ const Image = ({
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      driedflowers: file(relativePath: { eq: "dried-flowers.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
       autumn: file(relativePath: { eq: "autumn-leaves.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      autumnBranch: file(relativePath: { eq: "autumn-branch.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -41,13 +27,6 @@ const Image = ({
       rings: file(relativePath: { eq: "rings.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      burymanor: file(relativePath: { eq: "bury-manor.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
