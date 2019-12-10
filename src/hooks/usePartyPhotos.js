@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const usePartyPhotos = () => {
   const members = useStaticQuery(graphql`
     query {
-      mike: file(relativePath: { eq: "party/mike.png" }) {
+      mike: file(relativePath: { eq: "party/mike.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -17,7 +17,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      dave: file(relativePath: { eq: "party/dave.png" }) {
+      dave: file(relativePath: { eq: "party/dave.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -31,7 +31,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      nick: file(relativePath: { eq: "party/nick.png" }) {
+      nick: file(relativePath: { eq: "party/nick.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -45,7 +45,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      oli: file(relativePath: { eq: "party/oli.png" }) {
+      oli: file(relativePath: { eq: "party/oli.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -59,7 +59,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      andy: file(relativePath: { eq: "party/andy.png" }) {
+      andy: file(relativePath: { eq: "party/andy.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -73,7 +73,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      scott: file(relativePath: { eq: "party/scott.png" }) {
+      scott: file(relativePath: { eq: "party/scott.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -87,7 +87,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      emily: file(relativePath: { eq: "party/emily.png" }) {
+      emily: file(relativePath: { eq: "party/emily.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -101,7 +101,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      becky: file(relativePath: { eq: "party/becky.png" }) {
+      becky: file(relativePath: { eq: "party/becky.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -115,7 +115,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      ellie: file(relativePath: { eq: "party/ellie.png" }) {
+      ellie: file(relativePath: { eq: "party/ellie.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -129,7 +129,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      emma: file(relativePath: { eq: "party/emma.png" }) {
+      emma: file(relativePath: { eq: "party/emma.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -143,7 +143,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      lucy: file(relativePath: { eq: "party/lucy.png" }) {
+      lucy: file(relativePath: { eq: "party/lucy.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
