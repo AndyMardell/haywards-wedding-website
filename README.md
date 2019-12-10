@@ -1,6 +1,6 @@
 # Hayward's Wedding Website 💒
 
-A gatsby site for the Hayward's wedding.
+A gatsby site for the Hayward's wedding
 
 ## Development
 
