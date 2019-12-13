@@ -5,7 +5,7 @@ const useWeddingParty = ref => {
   const membersPhotos = usePartyPhotos()
   const [membersArray, setMembersArray] = useState([])
 
-  const infoArr = [
+  const orderedInfo = [
     {
       name: 'Mike',
       id: 'mike',
@@ -13,6 +13,16 @@ const useWeddingParty = ref => {
       image: membersPhotos.mike.childImageSharp.fluid,
       sillyImage: membersPhotos.sillymike.childImageSharp.fluid
     },
+    {
+      name: 'Emily',
+      id: 'emily',
+      bio: 'To persuade the Bride to turn up',
+      image: membersPhotos.emily.childImageSharp.fluid,
+      sillyImage: membersPhotos.sillyemily.childImageSharp.fluid
+    }
+  ]
+
+  const randomInfo = [
     {
       name: 'Dave',
       id: 'dave',
@@ -47,13 +57,6 @@ const useWeddingParty = ref => {
       bio: 'Takes an hour to tell a 5 minute story',
       image: membersPhotos.scott.childImageSharp.fluid,
       sillyImage: membersPhotos.sillyscott.childImageSharp.fluid
-    },
-    {
-      name: 'Emily',
-      id: 'emily',
-      bio: 'To persuade the Bride to turn up',
-      image: membersPhotos.emily.childImageSharp.fluid,
-      sillyImage: membersPhotos.sillyemily.childImageSharp.fluid
     },
     {
       name: 'Becky',
@@ -93,7 +96,7 @@ const useWeddingParty = ref => {
   ]
 
   useEffect(() => {
-    setMembersArray(shuffle(infoArr))
+    setMembersArray([...orderedInfo, ...shuffle(randomInfo)])
   }, [ref])
 
   return membersArray
