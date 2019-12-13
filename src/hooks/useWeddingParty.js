@@ -9,56 +9,56 @@ const useWeddingParty = ref => {
     {
       name: 'Mike',
       id: 'mike',
-      bio: 'Something about mike',
+      bio: 'Will revise after best man speech',
       image: membersPhotos.mike.childImageSharp.fluid,
       sillyImage: membersPhotos.sillymike.childImageSharp.fluid
     },
     {
       name: 'Dave',
       id: 'dave',
-      bio: 'Something about dave',
+      bio: 'Had to return the favour',
       image: membersPhotos.dave.childImageSharp.fluid,
       sillyImage: membersPhotos.sillydave.childImageSharp.fluid
     },
     {
       name: 'Nick',
       id: 'nick',
-      bio: 'Something about nick',
+      bio: 'Lock up your daughters',
       image: membersPhotos.nick.childImageSharp.fluid,
       sillyImage: membersPhotos.sillynick.childImageSharp.fluid
     },
     {
       name: 'Oli',
       id: 'oli',
-      bio: 'Something about oli',
+      bio: 'The Grandad',
       image: membersPhotos.oli.childImageSharp.fluid,
       sillyImage: membersPhotos.sillyoli.childImageSharp.fluid
     },
     {
       name: 'Andy',
       id: 'andy',
-      bio: 'Something about andy',
+      bio: 'Still not out of child size clothes',
       image: membersPhotos.andy.childImageSharp.fluid,
       sillyImage: membersPhotos.sillyandy.childImageSharp.fluid
     },
     {
       name: 'Scott',
       id: 'scott',
-      bio: 'Something about scott',
+      bio: 'Takes an hour to tell a 5 minute story',
       image: membersPhotos.scott.childImageSharp.fluid,
       sillyImage: membersPhotos.sillyscott.childImageSharp.fluid
     },
     {
       name: 'Emily',
       id: 'emily',
-      bio: 'Something about emily',
+      bio: 'To persuade the Bride to turn up',
       image: membersPhotos.emily.childImageSharp.fluid,
       sillyImage: membersPhotos.sillyemily.childImageSharp.fluid
     },
     {
       name: 'Becky',
       id: 'becky',
-      bio: 'Something about becky',
+      bio: 'Has not lost an argument since 1993',
       image: membersPhotos.becky.childImageSharp.fluid,
       sillyImage: membersPhotos.sillybecky.childImageSharp.fluid
     },
@@ -79,14 +79,14 @@ const useWeddingParty = ref => {
     {
       name: 'Lucy',
       id: 'lucy',
-      bio: 'Something about lucy',
+      bio: 'Will probably be late',
       image: membersPhotos.lucy.childImageSharp.fluid,
       sillyImage: membersPhotos.sillylucy.childImageSharp.fluid
     },
     {
       name: 'Mandy',
       id: 'mandy',
-      bio: 'Something about mandy',
+      bio: "Just don't start her laughing",
       image: membersPhotos.mandy.childImageSharp.fluid,
       sillyImage: membersPhotos.sillymandy.childImageSharp.fluid
     }

@@ -45,6 +45,11 @@ const Bio = styled.div`
   h4,
   p {
     color: white;
+    text-align: center;
+  }
+
+  p {
+    padding: 0 2rem;
   }
 `
 

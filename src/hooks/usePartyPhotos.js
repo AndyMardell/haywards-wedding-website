@@ -66,7 +66,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      sillyandy: file(relativePath: { eq: "party/silly/andy.png" }) {
+      sillyandy: file(relativePath: { eq: "party/silly/andy.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
