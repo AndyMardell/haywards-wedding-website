@@ -164,7 +164,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      sillymandy: file(relativePath: { eq: "party/silly/mandy.png" }) {
+      sillymandy: file(relativePath: { eq: "party/silly/mandy.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
