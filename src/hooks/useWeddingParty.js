@@ -65,7 +65,7 @@ const useWeddingParty = ref => {
     {
       name: 'Ellie',
       id: 'ellie',
-      bio: 'Something about ellie',
+      bio: 'Probably at (or in) a Musical',
       image: membersPhotos.ellie.childImageSharp.fluid,
       sillyImage: membersPhotos.sillyellie.childImageSharp.fluid
     },
