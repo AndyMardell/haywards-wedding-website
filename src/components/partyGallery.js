@@ -50,6 +50,7 @@ const Bio = styled.div`
 
   p {
     padding: 0 2rem;
+    line-height: 1.6;
   }
 `
 
