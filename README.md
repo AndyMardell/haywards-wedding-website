@@ -1,19 +1,30 @@
 # Hayward's Wedding Website 💒
 
-A gatsby site for the Hayward's wedding
+A [Gatsby](https://www.gatsbyjs.org/) site for the Hayward's wedding using
+[React Spring](https://www.react-spring.io/) for animation, shipped with
+[Zeit](https://zeit.co).
 
-## Development
+[Visit the live site 🔗](https://mrandmrshayward.com)
 
-`gatsby develop`
+_Disclaimer: this is not an invitation. Please don't come to the wedding unless
+you were actually invited by the Bride and Groom. Okay, cool._
 
-## Production
+## Development 👷
 
-`gatsby build`
+I'd rather you didn't deploy this site since, you know, it's my friends'
+wedding site. I'm open sourcing in case anyone is interested and feels like
+critiquing my code (I'm joking, please be nice to me).
 
-## Deployment
+```bash
+npm i
+gatsby develop
+```
 
-Automatic deployment from `master` to now.sh
+## Production 🚀
+
+This is deployed using [Zeit](https://zeit.co) so a push to master will trigger
+a deployment.
 
 --
 
-built with 💙
+Built with 💙
