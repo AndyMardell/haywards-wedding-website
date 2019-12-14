@@ -25,7 +25,7 @@ const Venue = () => {
 
   return (
     <Layout>
-      <SEO title="Venue &amp; Travel – James &amp; Sophie" />
+      <SEO title="Venue &amp; Travel" />
       <Intro>
         <h1>Venue &amp; Travel</h1>
         <P narrow>

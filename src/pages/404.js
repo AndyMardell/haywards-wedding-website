@@ -14,7 +14,7 @@ const Container = styled.div`
 
 const NotFoundPage = () => (
   <BlankLayout>
-    <SEO title="Page not found - James &amp; Sophie" />
+    <SEO title="Page not found" />
     <Container>
       <div>
         <h1>Not Found</h1>

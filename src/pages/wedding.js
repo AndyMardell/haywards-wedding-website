@@ -26,7 +26,7 @@ const Wedding = () => {
 
   return (
     <Layout>
-      <SEO title="The Wedding – James &amp; Sophie" />
+      <SEO title="The Wedding" />
       <Intro>
         <h1>The Wedding</h1>
         <P narrow>

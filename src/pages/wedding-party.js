@@ -8,7 +8,7 @@ import P from '../components/paragraph'
 
 const WeddingParty = () => (
   <Layout>
-    <SEO title="Wedding Party – James &amp; Sophie" />
+    <SEO title="Wedding Party" />
     <Intro>
       <h1>Wedding Party</h1>
       <P narrow>

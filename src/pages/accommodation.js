@@ -34,7 +34,7 @@ const Accommodation = () => {
 
   return (
     <Layout>
-      <SEO title="Accommodation – James &amp; Sophie" />
+      <SEO title="Accommodation" />
       <Intro>
         <h1>Accommodation</h1>
         <P narrow>

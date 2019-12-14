@@ -24,7 +24,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <SEO title="James &amp; Sophie's Wedding: 31 October 2020" />
+      <SEO title="James &amp; Sophie's Wedding: 31 October 2020" noTemplate />
       <HeaderSplash />
       <LayoutSplash>
         <Container>
