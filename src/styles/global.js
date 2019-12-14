@@ -170,15 +170,19 @@ blockquote {
     padding-top: 7px;
     padding-bottom: 15px;
     ${fluidRange(
-    {
-      prop: 'font-size',
-      fromSize: '18px',
-      toSize: '22px'
-    },
-    '400px',
-    '1000px'
-  )}
+      {
+        prop: 'font-size',
+        fromSize: '18px',
+        toSize: '22px'
+      },
+      '400px',
+      '1000px'
+    )}
   }
+}
+
+ul, ol {
+  padding-left: 17px;
 }
 `
 

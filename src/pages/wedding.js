@@ -55,8 +55,8 @@ const Wedding = () => {
           <h3>Reception</h3>
           <p>
             Evening guests are welcome to join in the celebrations from 7pm. The
-            reception will take place at the same venue as the ceremony. Further
-            information can be found on the{' '}
+            reception will take place at the same venue as the ceremony. For
+            more information, visit the{' '}
             <Link to="venue">Venue &amp; travel</Link> page.
           </p>
           <Info>
@@ -74,22 +74,26 @@ const Wedding = () => {
             note of:
           </p>
           <Info>
-            1. No stiletto heels
-            <br />
-            2. No paper or plastic confetti
-            <br />
-            3. Cash only bar
-            <br />
-            4. No little ones in the daytime
+            <ol>
+              <li>No stiletto heels</li>
+              <li>No paper or plastic confetti</li>
+              <li>Cash only bar</li>
+              <li>No little ones in the daytime</li>
+            </ol>
           </Info>
         </AnimatedBlock>
         <AnimatedBlock style={fadeInTrigger(250)}>
           <h3>RSVP</h3>
           <p>
             Information regarding RSVP&apos;s can be found on your invites,
-            please could you respond by <strong>31st August 2020</strong> at the
-            latest, including any dietary requirements you have.
+            please respond by <strong>31st August 2020</strong> at the latest,
+            and be sure to include any dietary requirements you have.
           </p>
+          <Info>
+            RSVP Deadline:
+            <br />
+            <strong>31st August 2020</strong>
+          </Info>
         </AnimatedBlock>
       </Content>
     </Layout>
