@@ -136,7 +136,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      sillyemma: file(relativePath: { eq: "party/silly/emma.png" }) {
+      sillyemma: file(relativePath: { eq: "party/silly/emma.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -150,7 +150,7 @@ const usePartyPhotos = () => {
           }
         }
       }
-      sillylucy: file(relativePath: { eq: "party/silly/lucy.png" }) {
+      sillylucy: file(relativePath: { eq: "party/silly/lucy.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 295, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
