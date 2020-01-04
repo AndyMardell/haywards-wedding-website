@@ -82,7 +82,7 @@ const useWeddingParty = ref => {
     {
       name: 'Lucy',
       id: 'lucy',
-      bio: 'Will probably be late',
+      bio: 'Will probably bring a juicer to the wedding breakfast',
       image: membersPhotos.lucy.childImageSharp.fluid,
       sillyImage: membersPhotos.sillylucy.childImageSharp.fluid
     },
