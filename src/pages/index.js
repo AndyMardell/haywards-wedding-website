@@ -24,17 +24,17 @@ const IndexPage = () => {
 
   return (
     <>
-      <SEO title="James &amp; Sophie's Wedding: 31 October 2020" noTemplate />
+      <SEO title="James &amp; Sophie's Wedding: 30 October 2021" noTemplate />
       <HeaderSplash />
       <LayoutSplash>
         <Container>
           <animated.div ref={animatedDiv} style={fadeInTrigger()}>
-            <h2>31 October 2020</h2>
+            <h2>30 October 2021</h2>
             <P narrow>
               We are looking forward to spending our big day with you all at
               Bury Manor Barn, click through for more information.
             </P>
-            <Link to="/wedding">More about our special day &rarr;</Link>
+            <Link to='/wedding'>More about our special day &rarr;</Link>
           </animated.div>
         </Container>
       </LayoutSplash>

@@ -20,13 +20,13 @@ const Wedding = () => {
   const notesRef = useRef(null)
   const [isInViewport, wrappedNotesRef] = useIsInViewport({
     target: notesRef,
-    modBottom: '-10%'
+    modBottom: '-10%',
   })
   const fadeInTrigger = useAnimate({ trigger: isInViewport })
 
   return (
     <Layout>
-      <SEO title="The Wedding" />
+      <SEO title='The Wedding' />
       <Intro>
         <h1>The Wedding</h1>
         <P narrow>
@@ -34,21 +34,21 @@ const Wedding = () => {
           us on our wedding day.
         </P>
       </Intro>
-      <AnimatedImage style={fadeIn(250)} file="rings" height={300} />
-      <Content css="margin-top: 2em" columns top>
+      <AnimatedImage style={fadeIn(250)} file='rings' height={300} />
+      <Content css='margin-top: 2em' columns top>
         <AnimatedBlock style={fadeIn(500)}>
           <h3>Ceremony</h3>
           <p>
             If day guests could please arrive at 12pm to be seated for a 1pm
             ceremony. You can find the address below; further information can be
-            found on the <Link to="venue">Venue &amp; travel</Link> page.
+            found on the <Link to='venue'>Venue &amp; travel</Link> page.
           </p>
           <Info>
-            1pm on 31 October 2020
+            1pm on 30 October 2021
             <br />
             Bury Manor Barn, West Sussex, RH20 1PB
             <br />
-            <Link to="venue">Map & Directions &rarr;</Link>
+            <Link to='venue'>Map & Directions &rarr;</Link>
           </Info>
         </AnimatedBlock>
         <AnimatedBlock style={fadeIn(750)}>
@@ -57,14 +57,14 @@ const Wedding = () => {
             Evening guests are welcome to join in the celebrations from 7pm. The
             reception will take place at the same venue as the ceremony. For
             more information, visit the{' '}
-            <Link to="venue">Venue &amp; travel</Link> page.
+            <Link to='venue'>Venue &amp; travel</Link> page.
           </p>
           <Info>
-            7pm on 31 October 2020
+            7pm on 30 October 2021
             <br />
             Bury Manor Barn, West Sussex, RH20 1PB
             <br />
-            <Link to="venue">Map & Directions &rarr;</Link>
+            <Link to='venue'>Map & Directions &rarr;</Link>
           </Info>
         </AnimatedBlock>
         <AnimatedBlock style={fadeInTrigger(0)}>
@@ -86,13 +86,13 @@ const Wedding = () => {
           <h3>RSVP</h3>
           <p>
             Information regarding RSVP&apos;s can be found on your invites,
-            please respond by <strong>31st August 2020</strong> at the latest,
+            please respond by <strong>31st August 2021</strong> at the latest,
             and be sure to include any dietary requirements you have.
           </p>
           <Info>
             RSVP Deadline:
             <br />
-            <strong>31st August 2020</strong>
+            <strong>31st August 2021</strong>
           </Info>
         </AnimatedBlock>
       </Content>

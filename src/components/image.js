@@ -13,7 +13,7 @@ const Image = ({
   absolute,
   style,
   objectPosition,
-  scale
+  scale,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -51,10 +51,10 @@ const Image = ({
   const springProps = useSpring({
     config: {
       tension: 250,
-      friction: 1000
+      friction: 1000,
     },
     from: { transform: 'scale(1)' },
-    transform: 'scale(1.15)'
+    transform: 'scale(1.15)',
   })
 
   const finalProps = {
@@ -64,8 +64,8 @@ const Image = ({
     style: {
       ...style,
       position: absolute ? 'absolute' : 'relative',
-      height: height && `${height}px`
-    }
+      height: height && `${height}px`,
+    },
   }
 
   if (scale) {
@@ -87,7 +87,7 @@ Image.propTypes = {
   height: PropTypes.number,
   absolute: PropTypes.bool,
   objectPosition: PropTypes.string,
-  scale: PropTypes.bool
+  scale: PropTypes.bool,
 }
 
 export default Image
