@@ -93,7 +93,7 @@ const Wedding = () => {
             rel="noopener noreferrer"
             href="https://www.amazon.co.uk/hz/wishlist/ls/3ES357R617L9G?ref_=wl_share"
           >
-            View our wishlist &rarr;
+            View our wish list &rarr;
           </a>
         </AnimatedBlock>
       </Content>
