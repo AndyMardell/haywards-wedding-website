@@ -21,18 +21,14 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: 'Playfair Display',
-          },
-          {
-            family: 'Open Sans',
-            variants: ['400', '400i', '600', '600i'],
-          },
+          `playfair display`,
+          `open sans\:400,400i,600,600i`
         ],
-      },
+        display: 'swap'
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
