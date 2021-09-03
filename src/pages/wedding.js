@@ -83,17 +83,18 @@ const Wedding = () => {
           </Info>
         </AnimatedBlock>
         <AnimatedBlock style={fadeInTrigger(250)}>
-          <h3>RSVP</h3>
+          <h3>Gifts</h3>
           <p>
-            Information regarding RSVP&apos;s can be found on your invites,
-            please respond by <strong>31st August 2021</strong> at the latest,
-            and be sure to include any dietary requirements you have.
+            Although we do not expect gifts, if you have a untameable urge to spend
+            money on us, you can find our Amazon wish list below.
           </p>
-          <Info>
-            RSVP Deadline:
-            <br />
-            <strong>31st August 2021</strong>
-          </Info>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.amazon.co.uk/hz/wishlist/ls/3ES357R617L9G?ref_=wl_share"
+          >
+            View our wishlist &rarr;
+          </a>
         </AnimatedBlock>
       </Content>
     </Layout>
